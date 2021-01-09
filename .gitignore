@@ -1,0 +1,7 @@
+Pods
+LiveM.xcworkspace
+LiveM.xcodeproj/xcuserdata
+LiveM.xcodeproj/xcshareddata
+LiveM.app.dSYM.zip
+LiveM.ipa
+fastlane/report.xml
