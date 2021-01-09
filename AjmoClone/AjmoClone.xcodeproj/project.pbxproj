@@ -13,8 +13,11 @@
 		53239CB025AA011200034A97 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53239CAE25AA011200034A97 /* Main.storyboard */; };
 		53239CB225AA011400034A97 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 53239CB125AA011400034A97 /* Assets.xcassets */; };
 		53239CB525AA011400034A97 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53239CB325AA011400034A97 /* LaunchScreen.storyboard */; };
-		53239CC025AA05D200034A97 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 53239CBF25AA05D200034A97 /* Alamofire */; };
-		53239CC425AA159500034A97 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 53239CC325AA159500034A97 /* Kingfisher */; };
+		53239CC025AA05D200034A97 /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = 53239CBF25AA05D200034A97 /* SwiftPackageProductDependency */; };
+		53239CC425AA159500034A97 /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = 53239CC325AA159500034A97 /* SwiftPackageProductDependency */; };
+		53239CC925AA366200034A97 /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53239CC825AA366200034A97 /* AppRouter.swift */; };
+		53239CCF25AA36A600034A97 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53239CCE25AA36A600034A97 /* Router.swift */; };
+		53239CD525AA374600034A97 /* UIWindow-AjmoClone.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53239CD425AA374600034A97 /* UIWindow-AjmoClone.swift */; };
 		8BDE8714DB7F3D82491A37C0 /* Pods_AjmoClone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89EA15EF45C24B7A58D291C8 /* Pods_AjmoClone.framework */; };
 /* End PBXBuildFile section */
 
@@ -27,6 +30,9 @@
 		53239CB125AA011400034A97 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		53239CB425AA011400034A97 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		53239CB625AA011400034A97 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		53239CC825AA366200034A97 /* AppRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRouter.swift; sourceTree = "<group>"; };
+		53239CCE25AA36A600034A97 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		53239CD425AA374600034A97 /* UIWindow-AjmoClone.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIWindow-AjmoClone.swift"; sourceTree = "<group>"; };
 		69DF562FF7470456EAA4EE81 /* Pods-AjmoClone.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AjmoClone.debug.xcconfig"; path = "Target Support Files/Pods-AjmoClone/Pods-AjmoClone.debug.xcconfig"; sourceTree = "<group>"; };
 		89EA15EF45C24B7A58D291C8 /* Pods_AjmoClone.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AjmoClone.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA62A3FDF95D36B25903D1ED /* Pods-AjmoClone.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AjmoClone.release.xcconfig"; path = "Target Support Files/Pods-AjmoClone/Pods-AjmoClone.release.xcconfig"; sourceTree = "<group>"; };
@@ -37,9 +43,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				53239CC425AA159500034A97 /* Kingfisher in Frameworks */,
+				53239CC425AA159500034A97 /* BuildFile in Frameworks */,
 				8BDE8714DB7F3D82491A37C0 /* Pods_AjmoClone.framework in Frameworks */,
-				53239CC025AA05D200034A97 /* Alamofire in Frameworks */,
+				53239CC025AA05D200034A97 /* BuildFile in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -67,6 +73,8 @@
 		53239CA725AA011200034A97 /* AjmoClone */ = {
 			isa = PBXGroup;
 			children = (
+				53239CC625AA364C00034A97 /* App */,
+				53239CCB25AA368B00034A97 /* Common */,
 				53239CA825AA011200034A97 /* AppDelegate.swift */,
 				53239CAA25AA011200034A97 /* SceneDelegate.swift */,
 				53239CAC25AA011200034A97 /* ViewController.swift */,
@@ -76,6 +84,63 @@
 				53239CB625AA011400034A97 /* Info.plist */,
 			);
 			path = AjmoClone;
+			sourceTree = "<group>";
+		};
+		53239CC625AA364C00034A97 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				53239CC725AA365300034A97 /* App routing */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		53239CC725AA365300034A97 /* App routing */ = {
+			isa = PBXGroup;
+			children = (
+				53239CC825AA366200034A97 /* AppRouter.swift */,
+			);
+			path = "App routing";
+			sourceTree = "<group>";
+		};
+		53239CCB25AA368B00034A97 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				53239CD225AA372900034A97 /* Extensions */,
+				53239CCC25AA369400034A97 /* Protocols */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		53239CCC25AA369400034A97 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				53239CCD25AA369A00034A97 /* General */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		53239CCD25AA369A00034A97 /* General */ = {
+			isa = PBXGroup;
+			children = (
+				53239CCE25AA36A600034A97 /* Router.swift */,
+			);
+			path = General;
+			sourceTree = "<group>";
+		};
+		53239CD225AA372900034A97 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				53239CD325AA372F00034A97 /* UIKit */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		53239CD325AA372F00034A97 /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				53239CD425AA374600034A97 /* UIWindow-AjmoClone.swift */,
+			);
+			path = UIKit;
 			sourceTree = "<group>";
 		};
 		72BE02F3F629757A3816DFB0 /* Pods */ = {
@@ -106,6 +171,7 @@
 				53239CA125AA011200034A97 /* Sources */,
 				53239CA225AA011200034A97 /* Frameworks */,
 				53239CA325AA011200034A97 /* Resources */,
+				EABB3474B6985092055AB8FD /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -113,8 +179,8 @@
 			);
 			name = AjmoClone;
 			packageProductDependencies = (
-				53239CBF25AA05D200034A97 /* Alamofire */,
-				53239CC325AA159500034A97 /* Kingfisher */,
+				53239CBF25AA05D200034A97 /* SwiftPackageProductDependency */,
+				53239CC325AA159500034A97 /* SwiftPackageProductDependency */,
 			);
 			productName = AjmoClone;
 			productReference = 53239CA525AA011200034A97 /* AjmoClone.app */;
@@ -144,8 +210,8 @@
 			);
 			mainGroup = 53239C9C25AA011200034A97;
 			packageReferences = (
-				53239CBE25AA05D200034A97 /* XCRemoteSwiftPackageReference "Alamofire" */,
-				53239CC225AA159500034A97 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				53239CBE25AA05D200034A97 /* RemoteSwiftPackageReference */,
+				53239CC225AA159500034A97 /* RemoteSwiftPackageReference */,
 			);
 			productRefGroup = 53239CA625AA011200034A97 /* Products */;
 			projectDirPath = "";
@@ -192,6 +258,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		EABB3474B6985092055AB8FD /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AjmoClone/Pods-AjmoClone-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AjmoClone/Pods-AjmoClone-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AjmoClone/Pods-AjmoClone-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -199,7 +282,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				53239CC925AA366200034A97 /* AppRouter.swift in Sources */,
 				53239CAD25AA011200034A97 /* ViewController.swift in Sources */,
+				53239CD525AA374600034A97 /* UIWindow-AjmoClone.swift in Sources */,
+				53239CCF25AA36A600034A97 /* Router.swift in Sources */,
 				53239CA925AA011200034A97 /* AppDelegate.swift in Sources */,
 				53239CAB25AA011200034A97 /* SceneDelegate.swift in Sources */,
 			);
@@ -407,7 +493,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		53239CBE25AA05D200034A97 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+		53239CBE25AA05D200034A97 /* RemoteSwiftPackageReference */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
 			requirement = {
@@ -415,7 +501,7 @@
 				minimumVersion = 5.4.1;
 			};
 		};
-		53239CC225AA159500034A97 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+		53239CC225AA159500034A97 /* RemoteSwiftPackageReference */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
 			requirement = {
@@ -426,14 +512,14 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		53239CBF25AA05D200034A97 /* Alamofire */ = {
+		53239CBF25AA05D200034A97 /* SwiftPackageProductDependency */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 53239CBE25AA05D200034A97 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			package = 53239CBE25AA05D200034A97 /* RemoteSwiftPackageReference */;
 			productName = Alamofire;
 		};
-		53239CC325AA159500034A97 /* Kingfisher */ = {
+		53239CC325AA159500034A97 /* SwiftPackageProductDependency */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 53239CC225AA159500034A97 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			package = 53239CC225AA159500034A97 /* RemoteSwiftPackageReference */;
 			productName = Kingfisher;
 		};
 /* End XCSwiftPackageProductDependency section */

@@ -1,3 +1,20 @@
-PODFILE CHECKSUM: 5e53b48639baf58d5a87562833b4b92491c050c1
+PODS:
+  - PromisesObjC (1.2.11)
+  - PromisesSwift (1.2.11):
+    - PromisesObjC (= 1.2.11)
+
+DEPENDENCIES:
+  - PromisesSwift
+
+SPEC REPOS:
+  trunk:
+    - PromisesObjC
+    - PromisesSwift
+
+SPEC CHECKSUMS:
+  PromisesObjC: 8c196f5a328c2cba3e74624585467a557dcb482f
+  PromisesSwift: fed4eb6f7a29846a22624d1b86b77e1dedb88724
+
+PODFILE CHECKSUM: dab4231ac40930970c8057612c4e54714491c0f7
 
 COCOAPODS: 1.10.0
