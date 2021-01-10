@@ -8,13 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		53239CA925AA011200034A97 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53239CA825AA011200034A97 /* AppDelegate.swift */; };
-		53239CAB25AA011200034A97 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53239CAA25AA011200034A97 /* SceneDelegate.swift */; };
-		53239CAD25AA011200034A97 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53239CAC25AA011200034A97 /* ViewController.swift */; };
-		53239CB025AA011200034A97 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53239CAE25AA011200034A97 /* Main.storyboard */; };
 		53239CB225AA011400034A97 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 53239CB125AA011400034A97 /* Assets.xcassets */; };
 		53239CB525AA011400034A97 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53239CB325AA011400034A97 /* LaunchScreen.storyboard */; };
-		53239CC025AA05D200034A97 /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = 53239CBF25AA05D200034A97 /* SwiftPackageProductDependency */; };
-		53239CC425AA159500034A97 /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = 53239CC325AA159500034A97 /* SwiftPackageProductDependency */; };
+		53239CC025AA05D200034A97 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 53239CBF25AA05D200034A97 /* Alamofire */; };
+		53239CC425AA159500034A97 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 53239CC325AA159500034A97 /* Kingfisher */; };
 		53239CC925AA366200034A97 /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53239CC825AA366200034A97 /* AppRouter.swift */; };
 		53239CCF25AA36A600034A97 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53239CCE25AA36A600034A97 /* Router.swift */; };
 		53239CD525AA374600034A97 /* UIWindow-AjmoClone.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53239CD425AA374600034A97 /* UIWindow-AjmoClone.swift */; };
@@ -24,9 +21,6 @@
 /* Begin PBXFileReference section */
 		53239CA525AA011200034A97 /* AjmoClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AjmoClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		53239CA825AA011200034A97 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		53239CAA25AA011200034A97 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		53239CAC25AA011200034A97 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		53239CAF25AA011200034A97 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		53239CB125AA011400034A97 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		53239CB425AA011400034A97 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		53239CB625AA011400034A97 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -43,9 +37,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				53239CC425AA159500034A97 /* BuildFile in Frameworks */,
+				53239CC425AA159500034A97 /* Kingfisher in Frameworks */,
 				8BDE8714DB7F3D82491A37C0 /* Pods_AjmoClone.framework in Frameworks */,
-				53239CC025AA05D200034A97 /* BuildFile in Frameworks */,
+				53239CC025AA05D200034A97 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,9 +70,6 @@
 				53239CC625AA364C00034A97 /* App */,
 				53239CCB25AA368B00034A97 /* Common */,
 				53239CA825AA011200034A97 /* AppDelegate.swift */,
-				53239CAA25AA011200034A97 /* SceneDelegate.swift */,
-				53239CAC25AA011200034A97 /* ViewController.swift */,
-				53239CAE25AA011200034A97 /* Main.storyboard */,
 				53239CB125AA011400034A97 /* Assets.xcassets */,
 				53239CB325AA011400034A97 /* LaunchScreen.storyboard */,
 				53239CB625AA011400034A97 /* Info.plist */,
@@ -179,8 +170,8 @@
 			);
 			name = AjmoClone;
 			packageProductDependencies = (
-				53239CBF25AA05D200034A97 /* SwiftPackageProductDependency */,
-				53239CC325AA159500034A97 /* SwiftPackageProductDependency */,
+				53239CBF25AA05D200034A97 /* Alamofire */,
+				53239CC325AA159500034A97 /* Kingfisher */,
 			);
 			productName = AjmoClone;
 			productReference = 53239CA525AA011200034A97 /* AjmoClone.app */;
@@ -210,8 +201,8 @@
 			);
 			mainGroup = 53239C9C25AA011200034A97;
 			packageReferences = (
-				53239CBE25AA05D200034A97 /* RemoteSwiftPackageReference */,
-				53239CC225AA159500034A97 /* RemoteSwiftPackageReference */,
+				53239CBE25AA05D200034A97 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				53239CC225AA159500034A97 /* XCRemoteSwiftPackageReference "Kingfisher" */,
 			);
 			productRefGroup = 53239CA625AA011200034A97 /* Products */;
 			projectDirPath = "";
@@ -229,7 +220,6 @@
 			files = (
 				53239CB525AA011400034A97 /* LaunchScreen.storyboard in Resources */,
 				53239CB225AA011400034A97 /* Assets.xcassets in Resources */,
-				53239CB025AA011200034A97 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -283,25 +273,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				53239CC925AA366200034A97 /* AppRouter.swift in Sources */,
-				53239CAD25AA011200034A97 /* ViewController.swift in Sources */,
 				53239CD525AA374600034A97 /* UIWindow-AjmoClone.swift in Sources */,
 				53239CCF25AA36A600034A97 /* Router.swift in Sources */,
 				53239CA925AA011200034A97 /* AppDelegate.swift in Sources */,
-				53239CAB25AA011200034A97 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		53239CAE25AA011200034A97 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				53239CAF25AA011200034A97 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		53239CB325AA011400034A97 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -493,7 +473,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		53239CBE25AA05D200034A97 /* RemoteSwiftPackageReference */ = {
+		53239CBE25AA05D200034A97 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
 			requirement = {
@@ -501,7 +481,7 @@
 				minimumVersion = 5.4.1;
 			};
 		};
-		53239CC225AA159500034A97 /* RemoteSwiftPackageReference */ = {
+		53239CC225AA159500034A97 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
 			requirement = {
@@ -512,14 +492,14 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		53239CBF25AA05D200034A97 /* SwiftPackageProductDependency */ = {
+		53239CBF25AA05D200034A97 /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 53239CBE25AA05D200034A97 /* RemoteSwiftPackageReference */;
+			package = 53239CBE25AA05D200034A97 /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
 		};
-		53239CC325AA159500034A97 /* SwiftPackageProductDependency */ = {
+		53239CC325AA159500034A97 /* Kingfisher */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 53239CC225AA159500034A97 /* RemoteSwiftPackageReference */;
+			package = 53239CC225AA159500034A97 /* XCRemoteSwiftPackageReference "Kingfisher" */;
 			productName = Kingfisher;
 		};
 /* End XCSwiftPackageProductDependency section */
