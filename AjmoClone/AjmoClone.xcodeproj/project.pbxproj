@@ -26,6 +26,11 @@
 		53239D3225AC275800034A97 /* JSONFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53239D3125AC275800034A97 /* JSONFormatter.swift */; };
 		53239F7325ACE9A700034A97 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 53239F7225ACE9A700034A97 /* Alamofire */; };
 		53239F7525ACE9A700034A97 /* Promises in Frameworks */ = {isa = PBXBuildFile; productRef = 53239F7425ACE9A700034A97 /* Promises */; };
+		53239FA125ACF5D800034A97 /* DiscoverContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53239F9C25ACF5D800034A97 /* DiscoverContentView.swift */; };
+		53239FA225ACF5D800034A97 /* DiscoverPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53239F9D25ACF5D800034A97 /* DiscoverPresenter.swift */; };
+		53239FA325ACF5D800034A97 /* DiscoverRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53239F9E25ACF5D800034A97 /* DiscoverRouter.swift */; };
+		53239FA425ACF5D800034A97 /* DiscoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53239F9F25ACF5D800034A97 /* DiscoverViewController.swift */; };
+		53239FA525ACF5D800034A97 /* DiscoverInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53239FA025ACF5D800034A97 /* DiscoverInteractor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +76,11 @@
 		53239D2B25AC232D00034A97 /* QueryBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueryBuilder.swift; sourceTree = "<group>"; };
 		53239D2E25AC271E00034A97 /* JSONEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONEncoder.swift; sourceTree = "<group>"; };
 		53239D3125AC275800034A97 /* JSONFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONFormatter.swift; sourceTree = "<group>"; };
+		53239F9C25ACF5D800034A97 /* DiscoverContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverContentView.swift; sourceTree = "<group>"; };
+		53239F9D25ACF5D800034A97 /* DiscoverPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverPresenter.swift; sourceTree = "<group>"; };
+		53239F9E25ACF5D800034A97 /* DiscoverRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverRouter.swift; sourceTree = "<group>"; };
+		53239F9F25ACF5D800034A97 /* DiscoverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverViewController.swift; sourceTree = "<group>"; };
+		53239FA025ACF5D800034A97 /* DiscoverInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverInteractor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,6 +143,7 @@
 			isa = PBXGroup;
 			children = (
 				53239CC725AA365300034A97 /* App routing */,
+				53239F9B25ACF5AF00034A97 /* Discover */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -273,6 +284,26 @@
 			path = Responses;
 			sourceTree = "<group>";
 		};
+		53239F9B25ACF5AF00034A97 /* Discover */ = {
+			isa = PBXGroup;
+			children = (
+				53239FA725ACF5E000034A97 /* Views */,
+				53239F9D25ACF5D800034A97 /* DiscoverPresenter.swift */,
+				53239F9E25ACF5D800034A97 /* DiscoverRouter.swift */,
+				53239F9F25ACF5D800034A97 /* DiscoverViewController.swift */,
+				53239FA025ACF5D800034A97 /* DiscoverInteractor.swift */,
+			);
+			path = Discover;
+			sourceTree = "<group>";
+		};
+		53239FA725ACF5E000034A97 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				53239F9C25ACF5D800034A97 /* DiscoverContentView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -398,9 +429,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				53239CC925AA366200034A97 /* AppRouter.swift in Sources */,
+				53239FA125ACF5D800034A97 /* DiscoverContentView.swift in Sources */,
 				53239CD525AA374600034A97 /* UIWindow-AjmoClone.swift in Sources */,
 				53239CCF25AA36A600034A97 /* Router.swift in Sources */,
+				53239FA325ACF5D800034A97 /* DiscoverRouter.swift in Sources */,
+				53239FA425ACF5D800034A97 /* DiscoverViewController.swift in Sources */,
+				53239FA525ACF5D800034A97 /* DiscoverInteractor.swift in Sources */,
 				53239CA925AA011200034A97 /* AppDelegate.swift in Sources */,
+				53239FA225ACF5D800034A97 /* DiscoverPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
