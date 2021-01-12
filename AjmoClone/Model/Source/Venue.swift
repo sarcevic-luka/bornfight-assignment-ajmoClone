@@ -20,13 +20,13 @@ public struct Venue {
   public let telephone: String?
   public let shareLink: String
   public let city: String
-  public let lat: String
-  public let lon: String
-  public let trending: Bool
-  public let promoted: Bool
-  public let bat: Bool
-  public let active: Bool
-  public let smokingArea: Bool
+  public let lat: Double
+  public let lon: Double
+  public let trending: Int
+  public let promoted: Int
+  public let bat: Int
+  public let active: Int
+  public let smokingArea: Int
   public let workingHours: [WorkHours]
   public let gallery: [GalleryImage]
   public let type: String
@@ -73,7 +73,7 @@ public extension Venue {
 public extension Venue {
   struct WorkHours: Decodable {
     public let id: Int
-    public let day: String
+    public let day: Int
     public let start: String
     public let end: String
   }

@@ -9,15 +9,15 @@ import UIKit
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
-    var window: UIWindow?
-    private(set) lazy var appRouter = AppRouter()
-
-    func application(_ application: UIApplication,
-                     didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        window = UIWindow(frame: UIScreen.main.bounds)
-        window?.rootViewController = appRouter.initialViewController()
-        window?.makeKeyAndVisible()
-        return true
-    }
+  var window: UIWindow?
+  private(set) lazy var appRouter = AppRouter()
+  
+  func application(_ application: UIApplication,
+                   didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+    window = UIWindow(frame: UIScreen.main.bounds)
+    window?.rootViewController = appRouter.initialViewController()
+    window?.makeKeyAndVisible()
+    return true
+  }
 }
 

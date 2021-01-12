@@ -11,7 +11,7 @@ import Promises
 import Alamofire
 
 public protocol DiscoverNetworkServiceProtocol {
-  func getDiscoverDetails() -> Promise<(News, Venues)>
+  func getDiscoverDetails() -> Promise<([News], Venues)>
 }
 
 public final class DiscoverNetworkService {
@@ -19,20 +19,20 @@ public final class DiscoverNetworkService {
 }
 
 extension DiscoverNetworkService: DiscoverNetworkServiceProtocol {
-  public func getDiscoverDetails() -> Promise<(News, Venues)> {
+  public func getDiscoverDetails() -> Promise<([News], Venues)> {
     all(getNews(), getVenues())
-      .then { (news, venues) -> Promise<(News, Venues)> in
+      .then { (news, venues) -> Promise<([News], Venues)> in
         return Promise((news, venues))
       }
   }
 }
 
 private extension DiscoverNetworkService {
-  func getNews() -> Promise<News> {
+  func getNews() -> Promise<[News]> {
     Promise { fullfill, reject in
       Networking.session
         .request(resource: DiscoverResource.getNews)
-        .responseDecodable(decoder: JSONDecoder.default) { (response: DataResponse<ApiResponseContainer<News>, AFError>) in
+        .responseDecodable(decoder: JSONDecoder.default) { (response: DataResponse<ApiResponseArrayContainer<News>, AFError>) in
           switch response.result {
           case .success(let container):
             fullfill(container.data)

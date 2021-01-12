@@ -22,8 +22,6 @@ extension AppRouter: Router {
 
 extension AppRouter {
   func initialViewController() -> UIViewController {
-    let vc = UIViewController()
-    vc.view.backgroundColor = .systemPink
-    return vc
+    return DiscoverRouter.createModule(delegate: nil)
   }
 }

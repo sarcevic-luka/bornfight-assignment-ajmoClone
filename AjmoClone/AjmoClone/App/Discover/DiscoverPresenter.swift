@@ -42,6 +42,9 @@ extension DiscoverPresenter: DiscoverViewPresentingLogic {
 
 private extension DiscoverPresenter {
   func fetchAndPresentDiscoverDetails() {
-    
+    interactor?.fetchDiscoverDetails()
+      .then { news, venues in
+        
+      }
   }
 }

@@ -9,8 +9,8 @@ import Foundation
 
 public struct VenueCategory {
   public let id: Int
-  public let image: Int
-  public let name: Int
+  public let image: String
+  public let name: String
 }
 
 extension VenueCategory: Decodable { }

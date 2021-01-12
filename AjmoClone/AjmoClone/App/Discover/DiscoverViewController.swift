@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SnapKit
 
 protocol DiscoverDisplayLogic: class { }
 
@@ -14,9 +15,14 @@ class DiscoverViewController: UIViewController {
   var presenter: DiscoverViewPresentingLogic?
   private lazy var contentView = DiscoverContentView()
   
+  override func loadView() {
+    view = contentView
+  }
+
   override func viewDidLoad() {
     super.viewDidLoad()
     setupView()
+    presenter?.onViewLoaded()
   }
 }
 
@@ -29,6 +35,6 @@ private extension DiscoverViewController {
   }
   
   func setupContentView() {
-    view.addSubview(contentView)
+    contentView.backgroundColor = .systemPink
   }
 }

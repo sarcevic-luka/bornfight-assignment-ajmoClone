@@ -8,7 +8,7 @@
 public struct Tag {
   public let id: Int
   public let color: String
-  public let tagGroupId: String
+  public let tagGroupId: Int
   public let name: String
 
   private enum CodingKeys: String, CodingKey {

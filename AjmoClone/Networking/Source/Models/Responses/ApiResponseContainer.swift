@@ -13,8 +13,8 @@ struct ApiResponseContainer<T: Decodable> {
 
 extension ApiResponseContainer: Decodable { }
 
-struct ApiResponseMessage {
-  let message: String
+struct ApiResponseArrayContainer<T: Decodable> {
+  let data: [T]
 }
 
-extension ApiResponseMessage: Decodable { }
+extension ApiResponseArrayContainer: Decodable { }

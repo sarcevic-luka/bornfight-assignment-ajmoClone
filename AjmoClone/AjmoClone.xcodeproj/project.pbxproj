@@ -44,6 +44,7 @@
 		5323A00325ADDA2D00034A97 /* DiscoverResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5323A00225ADDA2D00034A97 /* DiscoverResource.swift */; };
 		5323A00725ADDD6000034A97 /* ApiResponseContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5323A00625ADDD6000034A97 /* ApiResponseContainer.swift */; };
 		5323A00C25ADDE3500034A97 /* Decoding-Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5323A00B25ADDE3500034A97 /* Decoding-Networking.swift */; };
+		5323A01225AE10D000034A97 /* NetworkEventMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5323A01125AE10D000034A97 /* NetworkEventMonitor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -114,6 +115,7 @@
 		5323A00225ADDA2D00034A97 /* DiscoverResource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverResource.swift; sourceTree = "<group>"; };
 		5323A00625ADDD6000034A97 /* ApiResponseContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiResponseContainer.swift; sourceTree = "<group>"; };
 		5323A00B25ADDE3500034A97 /* Decoding-Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Decoding-Networking.swift"; sourceTree = "<group>"; };
+		5323A01125AE10D000034A97 /* NetworkEventMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkEventMonitor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -311,6 +313,7 @@
 				5323A00125ADD9C500034A97 /* Api resource */,
 				53239D1D25AB81CE00034A97 /* Host.swift */,
 				53239D2B25AC232D00034A97 /* QueryBuilder.swift */,
+				5323A01125AE10D000034A97 /* NetworkEventMonitor.swift */,
 				53239D2E25AC271E00034A97 /* JSONEncoder.swift */,
 				53239D3125AC275800034A97 /* JSONFormatter.swift */,
 			);
@@ -591,6 +594,7 @@
 				53239FB525AD941200034A97 /* DiscoverNetworkService.swift in Sources */,
 				5323A00325ADDA2D00034A97 /* DiscoverResource.swift in Sources */,
 				53239D1B25AB423500034A97 /* Resource.swift in Sources */,
+				5323A01225AE10D000034A97 /* NetworkEventMonitor.swift in Sources */,
 				53239D1725AB41FF00034A97 /* Session-Networking.swift in Sources */,
 				53239D2C25AC232D00034A97 /* QueryBuilder.swift in Sources */,
 				5323A00C25ADDE3500034A97 /* Decoding-Networking.swift in Sources */,

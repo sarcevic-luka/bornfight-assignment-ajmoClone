@@ -12,9 +12,9 @@ public struct News {
   public let links: [Link]
   public let imageUrl: String
   public let shareLink: String
-  public let isHighlighted: String
+  public let isHighlighted: Bool
   public let caption: String
-  public let isPromoted: Bool
+  public let isPromoted: Int
   public let highlightedText: String
   public let highlightedIcon: String
   public let highlightedColorFirst: String
@@ -31,7 +31,7 @@ public struct News {
     case caption
     case isPromoted = "is_promoted"
     case highlightedText = "highlighted_text"
-    case highlightedIcon = "highlighted_icon "
+    case highlightedIcon = "highlighted_icon"
     case highlightedColorFirst = "highlighted_gradient_color_first"
     case highlightedColorSecond = "highlighted_gradient_color_second"
     case title
@@ -45,8 +45,8 @@ public extension News {
   struct Link: Decodable {
     public let id: Int
     public let newsId: Int
-    public let linkId: Int
-    public let linkType: Int
+    public let linkId: Int?
+    public let linkType: String?
 
     private enum CodingKeys: String, CodingKey {
       case id

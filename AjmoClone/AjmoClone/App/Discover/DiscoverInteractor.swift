@@ -12,7 +12,7 @@ import Model
 import Promises
 
 protocol DiscoverBusinessLogic: class {
-  func fetchDiscoverDetails() -> Promise<(News, Venues)>
+  func fetchDiscoverDetails() -> Promise<([News], Venues)>
 }
 
 class DiscoverInteractor {
@@ -26,7 +26,7 @@ class DiscoverInteractor {
 
 // MARK: - DiscoverBusinessLogic
 extension DiscoverInteractor: DiscoverBusinessLogic {
-  func fetchDiscoverDetails() -> Promise<(News, Venues)> {
+  func fetchDiscoverDetails() -> Promise<([News], Venues)> {
     discoverNetworkService.getDiscoverDetails()
   }
 }
