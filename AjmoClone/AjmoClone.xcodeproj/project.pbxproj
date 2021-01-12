@@ -45,6 +45,10 @@
 		5323A00725ADDD6000034A97 /* ApiResponseContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5323A00625ADDD6000034A97 /* ApiResponseContainer.swift */; };
 		5323A00C25ADDE3500034A97 /* Decoding-Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5323A00B25ADDE3500034A97 /* Decoding-Networking.swift */; };
 		5323A01225AE10D000034A97 /* NetworkEventMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5323A01125AE10D000034A97 /* NetworkEventMonitor.swift */; };
+		5323A01825AE4BD900034A97 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5323A01725AE4BD900034A97 /* HeaderView.swift */; };
+		5323A01E25AE4CEE00034A97 /* CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5323A01D25AE4CEE00034A97 /* CollectionView.swift */; };
+		5323A02225AE4D3D00034A97 /* ReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5323A02125AE4D3D00034A97 /* ReusableView.swift */; };
+		5323A02825AE51DB00034A97 /* General.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5323A02725AE51DB00034A97 /* General.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -116,6 +120,10 @@
 		5323A00625ADDD6000034A97 /* ApiResponseContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiResponseContainer.swift; sourceTree = "<group>"; };
 		5323A00B25ADDE3500034A97 /* Decoding-Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Decoding-Networking.swift"; sourceTree = "<group>"; };
 		5323A01125AE10D000034A97 /* NetworkEventMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkEventMonitor.swift; sourceTree = "<group>"; };
+		5323A01725AE4BD900034A97 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
+		5323A01D25AE4CEE00034A97 /* CollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionView.swift; sourceTree = "<group>"; };
+		5323A02125AE4D3D00034A97 /* ReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableView.swift; sourceTree = "<group>"; };
+		5323A02725AE51DB00034A97 /* General.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = General.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -207,6 +215,8 @@
 			children = (
 				53239CD225AA372900034A97 /* Extensions */,
 				53239CCC25AA369400034A97 /* Protocols */,
+				5323A01525AE4BAD00034A97 /* UI */,
+				5323A02625AE51C400034A97 /* Utility */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -223,6 +233,7 @@
 			isa = PBXGroup;
 			children = (
 				53239CCE25AA36A600034A97 /* Router.swift */,
+				5323A02125AE4D3D00034A97 /* ReusableView.swift */,
 			);
 			path = General;
 			sourceTree = "<group>";
@@ -239,6 +250,7 @@
 			isa = PBXGroup;
 			children = (
 				53239CD425AA374600034A97 /* UIWindow-AjmoClone.swift */,
+				5323A01D25AE4CEE00034A97 /* CollectionView.swift */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -409,6 +421,30 @@
 			path = Decoding;
 			sourceTree = "<group>";
 		};
+		5323A01525AE4BAD00034A97 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				5323A01625AE4BCB00034A97 /* CollectionView */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		5323A01625AE4BCB00034A97 /* CollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				5323A01725AE4BD900034A97 /* HeaderView.swift */,
+			);
+			path = CollectionView;
+			sourceTree = "<group>";
+		};
+		5323A02625AE51C400034A97 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				5323A02725AE51DB00034A97 /* General.swift */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -577,11 +613,15 @@
 				53239CC925AA366200034A97 /* AppRouter.swift in Sources */,
 				53239FA125ACF5D800034A97 /* DiscoverContentView.swift in Sources */,
 				53239CD525AA374600034A97 /* UIWindow-AjmoClone.swift in Sources */,
+				5323A02225AE4D3D00034A97 /* ReusableView.swift in Sources */,
 				53239CCF25AA36A600034A97 /* Router.swift in Sources */,
 				53239FA325ACF5D800034A97 /* DiscoverRouter.swift in Sources */,
+				5323A01825AE4BD900034A97 /* HeaderView.swift in Sources */,
 				53239FA425ACF5D800034A97 /* DiscoverViewController.swift in Sources */,
+				5323A02825AE51DB00034A97 /* General.swift in Sources */,
 				53239FA525ACF5D800034A97 /* DiscoverInteractor.swift in Sources */,
 				53239CA925AA011200034A97 /* AppDelegate.swift in Sources */,
+				5323A01E25AE4CEE00034A97 /* CollectionView.swift in Sources */,
 				53239FA225ACF5D800034A97 /* DiscoverPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
