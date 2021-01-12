@@ -8,7 +8,11 @@
 
 import Foundation
 
-protocol DiscoverViewPresentingLogic: class { }
+protocol DiscoverViewPresentingLogic: class {
+  func onViewLoaded()
+  func onHeaderViewAllNewsTapped()
+  func onItemSelected(at indexPath: IndexPath)
+}
 
 class DiscoverPresenter {
   var interactor: DiscoverBusinessLogic?
@@ -23,4 +27,21 @@ class DiscoverPresenter {
 }
 
 // MARK: - DiscoverViewPresentingLogic
-extension DiscoverPresenter: DiscoverViewPresentingLogic { }
+extension DiscoverPresenter: DiscoverViewPresentingLogic {
+  func onViewLoaded() {
+    fetchAndPresentDiscoverDetails()
+  }
+  func onHeaderViewAllNewsTapped() {
+    #warning("Implementation pending")
+  }
+  
+  func onItemSelected(at indexPath: IndexPath) {
+    #warning("Implementation pending")
+  }
+}
+
+private extension DiscoverPresenter {
+  func fetchAndPresentDiscoverDetails() {
+    
+  }
+}

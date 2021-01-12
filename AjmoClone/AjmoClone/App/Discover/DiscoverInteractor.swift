@@ -7,10 +7,26 @@
 //
 
 import Foundation
+import Networking
+import Model
+import Promises
 
-protocol DiscoverBusinessLogic: class { }
+protocol DiscoverBusinessLogic: class {
+  func fetchDiscoverDetails() -> Promise<(News, Venues)>
+}
 
-class DiscoverInteractor { }
+class DiscoverInteractor {
+  private let discoverNetworkService: DiscoverNetworkServiceProtocol
+
+  init(discoverNetworkService: DiscoverNetworkServiceProtocol = DiscoverNetworkService()) {
+    self.discoverNetworkService = discoverNetworkService
+  }
+
+}
 
 // MARK: - DiscoverBusinessLogic
-extension DiscoverInteractor: DiscoverBusinessLogic { }
+extension DiscoverInteractor: DiscoverBusinessLogic {
+  func fetchDiscoverDetails() -> Promise<(News, Venues)> {
+    discoverNetworkService.getDiscoverDetails()
+  }
+}
