@@ -9,5 +9,5 @@ import Foundation
 import Alamofire
 
 public final class Networking {
-  internal static let gixonSession = Alamofire.Session(configuration: URLSessionConfiguration.default)
+  internal static let session = Alamofire.Session(configuration: URLSessionConfiguration.default)
 }

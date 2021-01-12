@@ -9,7 +9,6 @@ import Alamofire
 
 protocol Resource {
   var endpoint: String { get }
-  var headers: HTTPHeaders { get }
   var method: HTTPMethod { get }
   var queryItems: [URLQueryItem]  { get }
 }
@@ -24,4 +23,7 @@ extension Resource {
       .addQueryItems(queryItems)
       .build() ?? baseUrl
   }
+  
+  var method: HTTPMethod { .get }
+  var queryItems: [URLQueryItem] { [] }
 }
