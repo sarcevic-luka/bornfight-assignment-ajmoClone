@@ -31,6 +31,7 @@
 		53239FA325ACF5D800034A97 /* DiscoverRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53239F9E25ACF5D800034A97 /* DiscoverRouter.swift */; };
 		53239FA425ACF5D800034A97 /* DiscoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53239F9F25ACF5D800034A97 /* DiscoverViewController.swift */; };
 		53239FA525ACF5D800034A97 /* DiscoverInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53239FA025ACF5D800034A97 /* DiscoverInteractor.swift */; };
+		53239FAB25ACFB0300034A97 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 53239FAA25ACFB0300034A97 /* SnapKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,6 +89,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				53239FAB25ACFB0300034A97 /* SnapKit in Frameworks */,
 				53239D0425AB404A00034A97 /* Networking.framework in Frameworks */,
 				53239CC425AA159500034A97 /* Kingfisher in Frameworks */,
 			);
@@ -287,6 +289,7 @@
 		53239F9B25ACF5AF00034A97 /* Discover */ = {
 			isa = PBXGroup;
 			children = (
+				53239FB125AD813300034A97 /* Utility */,
 				53239FA725ACF5E000034A97 /* Views */,
 				53239F9D25ACF5D800034A97 /* DiscoverPresenter.swift */,
 				53239F9E25ACF5D800034A97 /* DiscoverRouter.swift */,
@@ -302,6 +305,13 @@
 				53239F9C25ACF5D800034A97 /* DiscoverContentView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		53239FB125AD813300034A97 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utility;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -335,6 +345,7 @@
 			name = AjmoClone;
 			packageProductDependencies = (
 				53239CC325AA159500034A97 /* Kingfisher */,
+				53239FAA25ACFB0300034A97 /* SnapKit */,
 			);
 			productName = AjmoClone;
 			productReference = 53239CA525AA011200034A97 /* AjmoClone.app */;
@@ -393,6 +404,7 @@
 				53239CBE25AA05D200034A97 /* XCRemoteSwiftPackageReference "Alamofire" */,
 				53239CC225AA159500034A97 /* XCRemoteSwiftPackageReference "Kingfisher" */,
 				53239F2825ACCB1700034A97 /* XCRemoteSwiftPackageReference "promises" */,
+				53239FA925ACFB0300034A97 /* XCRemoteSwiftPackageReference "SnapKit" */,
 			);
 			productRefGroup = 53239CA625AA011200034A97 /* Products */;
 			projectDirPath = "";
@@ -750,6 +762,14 @@
 				minimumVersion = 1.2.12;
 			};
 		};
+		53239FA925ACFB0300034A97 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.1;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -767,6 +787,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 53239F2825ACCB1700034A97 /* XCRemoteSwiftPackageReference "promises" */;
 			productName = Promises;
+		};
+		53239FAA25ACFB0300034A97 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 53239FA925ACFB0300034A97 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
