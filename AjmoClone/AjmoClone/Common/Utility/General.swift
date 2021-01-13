@@ -13,3 +13,7 @@ typealias ParametrisedAction<T> = (T) -> Void
 func onMainThread(action: Action?) {
   DispatchQueue.main.async { action?() }
 }
+
+public protocol Asset {
+  var name: String { get }
+}
