@@ -55,6 +55,8 @@
 		5323A03F25AECA7300034A97 /* NewsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5323A03E25AECA7300034A97 /* NewsCell.swift */; };
 		5323A04325AECF2A00034A97 /* DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5323A04225AECF2A00034A97 /* DateFormatter.swift */; };
 		5323A04725AEF3BD00034A97 /* VenueCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5323A04625AEF3BD00034A97 /* VenueCell.swift */; };
+		5323A04B25AEFCC400034A97 /* VenueTypeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5323A04A25AEFCC400034A97 /* VenueTypeCell.swift */; };
+		5323A04F25AEFECB00034A97 /* UIColor-AjmoClone.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5323A04E25AEFECB00034A97 /* UIColor-AjmoClone.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -136,6 +138,8 @@
 		5323A03E25AECA7300034A97 /* NewsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsCell.swift; sourceTree = "<group>"; };
 		5323A04225AECF2A00034A97 /* DateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatter.swift; sourceTree = "<group>"; };
 		5323A04625AEF3BD00034A97 /* VenueCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenueCell.swift; sourceTree = "<group>"; };
+		5323A04A25AEFCC400034A97 /* VenueTypeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenueTypeCell.swift; sourceTree = "<group>"; };
+		5323A04E25AEFECB00034A97 /* UIColor-AjmoClone.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor-AjmoClone.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -264,6 +268,7 @@
 			children = (
 				53239CD425AA374600034A97 /* UIWindow-AjmoClone.swift */,
 				5323A01D25AE4CEE00034A97 /* CollectionView.swift */,
+				5323A04E25AEFECB00034A97 /* UIColor-AjmoClone.swift */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -466,6 +471,7 @@
 				5323A03E25AECA7300034A97 /* NewsCell.swift */,
 				5323A02E25AE587100034A97 /* PromoCell.swift */,
 				5323A04625AEF3BD00034A97 /* VenueCell.swift */,
+				5323A04A25AEFCC400034A97 /* VenueTypeCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -668,9 +674,11 @@
 				53239FA525ACF5D800034A97 /* DiscoverInteractor.swift in Sources */,
 				5323A03F25AECA7300034A97 /* NewsCell.swift in Sources */,
 				53239CA925AA011200034A97 /* AppDelegate.swift in Sources */,
+				5323A04F25AEFECB00034A97 /* UIColor-AjmoClone.swift in Sources */,
 				5323A01E25AE4CEE00034A97 /* CollectionView.swift in Sources */,
 				53239FA225ACF5D800034A97 /* DiscoverPresenter.swift in Sources */,
 				5323A04725AEF3BD00034A97 /* VenueCell.swift in Sources */,
+				5323A04B25AEFCC400034A97 /* VenueTypeCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
