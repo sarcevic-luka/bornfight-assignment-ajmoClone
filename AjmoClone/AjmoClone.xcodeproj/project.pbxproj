@@ -54,6 +54,7 @@
 		5323A03B25AEC72900034A97 /* ImageAsset-Protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5323A03A25AEC72900034A97 /* ImageAsset-Protocol.swift */; };
 		5323A03F25AECA7300034A97 /* NewsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5323A03E25AECA7300034A97 /* NewsCell.swift */; };
 		5323A04325AECF2A00034A97 /* DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5323A04225AECF2A00034A97 /* DateFormatter.swift */; };
+		5323A04725AEF3BD00034A97 /* VenueCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5323A04625AEF3BD00034A97 /* VenueCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -134,6 +135,7 @@
 		5323A03A25AEC72900034A97 /* ImageAsset-Protocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ImageAsset-Protocol.swift"; sourceTree = "<group>"; };
 		5323A03E25AECA7300034A97 /* NewsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsCell.swift; sourceTree = "<group>"; };
 		5323A04225AECF2A00034A97 /* DateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatter.swift; sourceTree = "<group>"; };
+		5323A04625AEF3BD00034A97 /* VenueCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenueCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -461,8 +463,9 @@
 		5323A02D25AE576300034A97 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				5323A02E25AE587100034A97 /* PromoCell.swift */,
 				5323A03E25AECA7300034A97 /* NewsCell.swift */,
+				5323A02E25AE587100034A97 /* PromoCell.swift */,
+				5323A04625AEF3BD00034A97 /* VenueCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -667,6 +670,7 @@
 				53239CA925AA011200034A97 /* AppDelegate.swift in Sources */,
 				5323A01E25AE4CEE00034A97 /* CollectionView.swift in Sources */,
 				53239FA225ACF5D800034A97 /* DiscoverPresenter.swift in Sources */,
+				5323A04725AEF3BD00034A97 /* VenueCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
