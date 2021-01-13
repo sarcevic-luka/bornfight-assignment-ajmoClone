@@ -58,6 +58,5 @@ private extension VenueTypeCell {
       $0.center.equalToSuperview()
     }
     titleLabel.font = .systemFont(ofSize: 12)
-    titleLabel.textColor = .black
   }
 }

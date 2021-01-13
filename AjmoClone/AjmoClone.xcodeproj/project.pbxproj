@@ -57,7 +57,7 @@
 		5323A04725AEF3BD00034A97 /* VenueCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5323A04625AEF3BD00034A97 /* VenueCell.swift */; };
 		5323A04B25AEFCC400034A97 /* VenueTypeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5323A04A25AEFCC400034A97 /* VenueTypeCell.swift */; };
 		5323A04F25AEFECB00034A97 /* UIColor-AjmoClone.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5323A04E25AEFECB00034A97 /* UIColor-AjmoClone.swift */; };
-		5323A05325AF148100034A97 /* VenueCategorieCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5323A05225AF148100034A97 /* VenueCategorieCell.swift */; };
+		5323A05325AF148100034A97 /* VenueCategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5323A05225AF148100034A97 /* VenueCategoryCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -141,7 +141,7 @@
 		5323A04625AEF3BD00034A97 /* VenueCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenueCell.swift; sourceTree = "<group>"; };
 		5323A04A25AEFCC400034A97 /* VenueTypeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenueTypeCell.swift; sourceTree = "<group>"; };
 		5323A04E25AEFECB00034A97 /* UIColor-AjmoClone.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor-AjmoClone.swift"; sourceTree = "<group>"; };
-		5323A05225AF148100034A97 /* VenueCategorieCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenueCategorieCell.swift; sourceTree = "<group>"; };
+		5323A05225AF148100034A97 /* VenueCategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenueCategoryCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -472,7 +472,7 @@
 			children = (
 				5323A03E25AECA7300034A97 /* NewsCell.swift */,
 				5323A02E25AE587100034A97 /* PromoCell.swift */,
-				5323A05225AF148100034A97 /* VenueCategorieCell.swift */,
+				5323A05225AF148100034A97 /* VenueCategoryCell.swift */,
 				5323A04625AEF3BD00034A97 /* VenueCell.swift */,
 				5323A04A25AEFCC400034A97 /* VenueTypeCell.swift */,
 			);
@@ -672,7 +672,7 @@
 				53239FA325ACF5D800034A97 /* DiscoverRouter.swift in Sources */,
 				5323A01825AE4BD900034A97 /* HeaderView.swift in Sources */,
 				5323A02F25AE587100034A97 /* PromoCell.swift in Sources */,
-				5323A05325AF148100034A97 /* VenueCategorieCell.swift in Sources */,
+				5323A05325AF148100034A97 /* VenueCategoryCell.swift in Sources */,
 				53239FA425ACF5D800034A97 /* DiscoverViewController.swift in Sources */,
 				5323A02825AE51DB00034A97 /* General.swift in Sources */,
 				53239FA525ACF5D800034A97 /* DiscoverInteractor.swift in Sources */,
