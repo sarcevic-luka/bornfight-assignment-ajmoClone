@@ -15,6 +15,7 @@ public struct News {
   public let isHighlighted: Bool
   public let caption: String
   public let isPromoted: Int
+  public let createdAt: TimeInterval
   public let highlightedText: String
   public let highlightedIcon: String
   public let highlightedColorFirst: String
@@ -30,6 +31,7 @@ public struct News {
     case isHighlighted
     case caption
     case isPromoted = "is_promoted"
+    case createdAt = "created_at"
     case highlightedText = "highlighted_text"
     case highlightedIcon = "highlighted_icon"
     case highlightedColorFirst = "highlighted_gradient_color_first"
