@@ -49,6 +49,9 @@
 		5323A01E25AE4CEE00034A97 /* CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5323A01D25AE4CEE00034A97 /* CollectionView.swift */; };
 		5323A02225AE4D3D00034A97 /* ReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5323A02125AE4D3D00034A97 /* ReusableView.swift */; };
 		5323A02825AE51DB00034A97 /* General.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5323A02725AE51DB00034A97 /* General.swift */; };
+		5323A02F25AE587100034A97 /* PromoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5323A02E25AE587100034A97 /* PromoCell.swift */; };
+		5323A03725AEC5B700034A97 /* ImageAssetes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5323A03625AEC5B700034A97 /* ImageAssetes.swift */; };
+		5323A03B25AEC72900034A97 /* ImageAsset-Protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5323A03A25AEC72900034A97 /* ImageAsset-Protocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -124,6 +127,9 @@
 		5323A01D25AE4CEE00034A97 /* CollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionView.swift; sourceTree = "<group>"; };
 		5323A02125AE4D3D00034A97 /* ReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableView.swift; sourceTree = "<group>"; };
 		5323A02725AE51DB00034A97 /* General.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = General.swift; sourceTree = "<group>"; };
+		5323A02E25AE587100034A97 /* PromoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromoCell.swift; sourceTree = "<group>"; };
+		5323A03625AEC5B700034A97 /* ImageAssetes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageAssetes.swift; sourceTree = "<group>"; };
+		5323A03A25AEC72900034A97 /* ImageAsset-Protocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ImageAsset-Protocol.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -213,6 +219,7 @@
 		53239CCB25AA368B00034A97 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				5323A03425AEC59F00034A97 /* Assets */,
 				53239CD225AA372900034A97 /* Extensions */,
 				53239CCC25AA369400034A97 /* Protocols */,
 				5323A01525AE4BAD00034A97 /* UI */,
@@ -363,6 +370,7 @@
 		53239FA725ACF5E000034A97 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				5323A02D25AE576300034A97 /* Cells */,
 				53239F9C25ACF5D800034A97 /* DiscoverContentView.swift */,
 			);
 			path = Views;
@@ -443,6 +451,31 @@
 				5323A02725AE51DB00034A97 /* General.swift */,
 			);
 			path = Utility;
+			sourceTree = "<group>";
+		};
+		5323A02D25AE576300034A97 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				5323A02E25AE587100034A97 /* PromoCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		5323A03425AEC59F00034A97 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				5323A03525AEC5A800034A97 /* Images */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		5323A03525AEC5A800034A97 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				5323A03625AEC5B700034A97 /* ImageAssetes.swift */,
+				5323A03A25AEC72900034A97 /* ImageAsset-Protocol.swift */,
+			);
+			path = Images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -612,11 +645,14 @@
 			files = (
 				53239CC925AA366200034A97 /* AppRouter.swift in Sources */,
 				53239FA125ACF5D800034A97 /* DiscoverContentView.swift in Sources */,
+				5323A03725AEC5B700034A97 /* ImageAssetes.swift in Sources */,
 				53239CD525AA374600034A97 /* UIWindow-AjmoClone.swift in Sources */,
 				5323A02225AE4D3D00034A97 /* ReusableView.swift in Sources */,
 				53239CCF25AA36A600034A97 /* Router.swift in Sources */,
+				5323A03B25AEC72900034A97 /* ImageAsset-Protocol.swift in Sources */,
 				53239FA325ACF5D800034A97 /* DiscoverRouter.swift in Sources */,
 				5323A01825AE4BD900034A97 /* HeaderView.swift in Sources */,
+				5323A02F25AE587100034A97 /* PromoCell.swift in Sources */,
 				53239FA425ACF5D800034A97 /* DiscoverViewController.swift in Sources */,
 				5323A02825AE51DB00034A97 /* General.swift in Sources */,
 				53239FA525ACF5D800034A97 /* DiscoverInteractor.swift in Sources */,
