@@ -65,6 +65,9 @@
 		5362CAD825AFB15100DB2288 /* Pick.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5362CAD725AFB15100DB2288 /* Pick.swift */; };
 		5362CAEF25B0522700DB2288 /* Discover-CollectionLayouts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5362CAEE25B0522700DB2288 /* Discover-CollectionLayouts.swift */; };
 		5362CB1025B0A0DF00DB2288 /* ColorAssets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5362CB0F25B0A0DF00DB2288 /* ColorAssets.swift */; };
+		5362CB1625B0A47800DB2288 /* StartupProcessService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5362CB1525B0A47800DB2288 /* StartupProcessService.swift */; };
+		5362CB1C25B0A48F00DB2288 /* StartupProcess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5362CB1B25B0A48F00DB2288 /* StartupProcess.swift */; };
+		5362CB2425B0A4EE00DB2288 /* AppearanceCustomisationStartupProcess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5362CB2325B0A4EE00DB2288 /* AppearanceCustomisationStartupProcess.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -156,6 +159,9 @@
 		5362CAD725AFB15100DB2288 /* Pick.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pick.swift; sourceTree = "<group>"; };
 		5362CAEE25B0522700DB2288 /* Discover-CollectionLayouts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Discover-CollectionLayouts.swift"; sourceTree = "<group>"; };
 		5362CB0F25B0A0DF00DB2288 /* ColorAssets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorAssets.swift; sourceTree = "<group>"; };
+		5362CB1525B0A47800DB2288 /* StartupProcessService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartupProcessService.swift; sourceTree = "<group>"; };
+		5362CB1B25B0A48F00DB2288 /* StartupProcess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartupProcess.swift; sourceTree = "<group>"; };
+		5362CB2325B0A4EE00DB2288 /* AppearanceCustomisationStartupProcess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppearanceCustomisationStartupProcess.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -480,8 +486,9 @@
 		5323A02625AE51C400034A97 /* Utility */ = {
 			isa = PBXGroup;
 			children = (
-				5323A02725AE51DB00034A97 /* General.swift */,
+				5362CB1F25B0A4A600DB2288 /* Startup process */,
 				5323A04225AECF2A00034A97 /* DateFormatter.swift */,
+				5323A02725AE51DB00034A97 /* General.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -547,6 +554,24 @@
 				5362CB0F25B0A0DF00DB2288 /* ColorAssets.swift */,
 			);
 			path = Colors;
+			sourceTree = "<group>";
+		};
+		5362CB1F25B0A4A600DB2288 /* Startup process */ = {
+			isa = PBXGroup;
+			children = (
+				5362CB2025B0A4BC00DB2288 /* Processes */,
+				5362CB1B25B0A48F00DB2288 /* StartupProcess.swift */,
+				5362CB1525B0A47800DB2288 /* StartupProcessService.swift */,
+			);
+			path = "Startup process";
+			sourceTree = "<group>";
+		};
+		5362CB2025B0A4BC00DB2288 /* Processes */ = {
+			isa = PBXGroup;
+			children = (
+				5362CB2325B0A4EE00DB2288 /* AppearanceCustomisationStartupProcess.swift */,
+			);
+			path = Processes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -724,8 +749,10 @@
 				5323A03B25AEC72900034A97 /* ImageAsset-Protocol.swift in Sources */,
 				53239FA325ACF5D800034A97 /* DiscoverRouter.swift in Sources */,
 				5323A01825AE4BD900034A97 /* HeaderView.swift in Sources */,
+				5362CB2425B0A4EE00DB2288 /* AppearanceCustomisationStartupProcess.swift in Sources */,
 				5362CB1025B0A0DF00DB2288 /* ColorAssets.swift in Sources */,
 				5323A02F25AE587100034A97 /* PromoCell.swift in Sources */,
+				5362CB1625B0A47800DB2288 /* StartupProcessService.swift in Sources */,
 				5323A05325AF148100034A97 /* VenueCategoryCell.swift in Sources */,
 				5323A0AC25AF30A400034A97 /* DataSourceProtocol.swift in Sources */,
 				53239FA425ACF5D800034A97 /* DiscoverViewController.swift in Sources */,
@@ -738,6 +765,7 @@
 				53239FA225ACF5D800034A97 /* DiscoverPresenter.swift in Sources */,
 				5323A04725AEF3BD00034A97 /* VenueCell.swift in Sources */,
 				5323A04B25AEFCC400034A97 /* VenueTagCell.swift in Sources */,
+				5362CB1C25B0A48F00DB2288 /* StartupProcess.swift in Sources */,
 				5323A05825AF25D100034A97 /* DiscoverDataSource.swift in Sources */,
 				5323A0B125AF337F00034A97 /* Collection-AjmoClone.swift in Sources */,
 				5323A0A825AF302A00034A97 /* SectionProtocol.swift in Sources */,

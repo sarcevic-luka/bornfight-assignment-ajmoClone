@@ -14,6 +14,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   
   func application(_ application: UIApplication,
                    didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+    StartupProcessService()
+      .execute(process: AppearanceCustomisationStartupProcess())
+
     window = UIWindow(frame: UIScreen.main.bounds)
     let initialViewController = appRouter.initialViewController()
     let navigationController = UINavigationController(rootViewController: initialViewController)

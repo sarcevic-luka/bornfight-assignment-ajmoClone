@@ -26,13 +26,6 @@ class HeaderView: UICollectionReusableView {
 }
 
 extension HeaderView {
-  var titleFont: UIFont? {
-    get { titleLabel.font }
-    set { titleLabel.font = newValue }
-  }
-}
-
-extension HeaderView {
   func update(_ viewModel: ViewModel) {
     titleLabel.text = viewModel.title
     actionButton.setTitle(viewModel.actionButtonTitle, for: .normal)

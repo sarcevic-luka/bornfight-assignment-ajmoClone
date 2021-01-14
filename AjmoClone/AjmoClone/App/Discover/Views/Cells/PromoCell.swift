@@ -74,7 +74,7 @@ private extension PromoCell {
     }
     highlightedView.layer.cornerRadius = 4
     highlightedView.clipsToBounds = true
-    highlightedView.backgroundColor = .blue
+    highlightedView.backgroundColor = UIColor.Blue.lightBlue
   }
   
   func setupHighlightedImageView() {
@@ -97,7 +97,7 @@ private extension PromoCell {
       $0.centerY.equalToSuperview()
     }
     highlightedTextLabel.textAlignment = .left
-    highlightedTextLabel.textColor = .white
+    highlightedTextLabel.textColor = UIColor.Yellow.golden
   }
   
   func setupCaptionLabel() {
