@@ -63,6 +63,7 @@
 		5323A0AC25AF30A400034A97 /* DataSourceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5323A0AB25AF30A400034A97 /* DataSourceProtocol.swift */; };
 		5323A0B125AF337F00034A97 /* Collection-AjmoClone.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5323A0B025AF337F00034A97 /* Collection-AjmoClone.swift */; };
 		5362CAD825AFB15100DB2288 /* Pick.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5362CAD725AFB15100DB2288 /* Pick.swift */; };
+		5362CAEF25B0522700DB2288 /* Discover-CollectionLayouts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5362CAEE25B0522700DB2288 /* Discover-CollectionLayouts.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -152,6 +153,7 @@
 		5323A0AB25AF30A400034A97 /* DataSourceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSourceProtocol.swift; sourceTree = "<group>"; };
 		5323A0B025AF337F00034A97 /* Collection-AjmoClone.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection-AjmoClone.swift"; sourceTree = "<group>"; };
 		5362CAD725AFB15100DB2288 /* Pick.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pick.swift; sourceTree = "<group>"; };
+		5362CAEE25B0522700DB2288 /* Discover-CollectionLayouts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Discover-CollectionLayouts.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -405,6 +407,7 @@
 		53239FB125AD813300034A97 /* Utility */ = {
 			isa = PBXGroup;
 			children = (
+				5362CAEE25B0522700DB2288 /* Discover-CollectionLayouts.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -726,6 +729,7 @@
 				5323A05825AF25D100034A97 /* DiscoverDataSource.swift in Sources */,
 				5323A0B125AF337F00034A97 /* Collection-AjmoClone.swift in Sources */,
 				5323A0A825AF302A00034A97 /* SectionProtocol.swift in Sources */,
+				5362CAEF25B0522700DB2288 /* Discover-CollectionLayouts.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
