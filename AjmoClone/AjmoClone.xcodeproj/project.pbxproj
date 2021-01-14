@@ -10,7 +10,7 @@
 		53239CA925AA011200034A97 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53239CA825AA011200034A97 /* AppDelegate.swift */; };
 		53239CB225AA011400034A97 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 53239CB125AA011400034A97 /* Assets.xcassets */; };
 		53239CB525AA011400034A97 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53239CB325AA011400034A97 /* LaunchScreen.storyboard */; };
-		53239CC425AA159500034A97 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 53239CC325AA159500034A97 /* Kingfisher */; };
+		53239CC425AA159500034A97 /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = 53239CC325AA159500034A97 /* SwiftPackageProductDependency */; };
 		53239CC925AA366200034A97 /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53239CC825AA366200034A97 /* AppRouter.swift */; };
 		53239CCF25AA36A600034A97 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53239CCE25AA36A600034A97 /* Router.swift */; };
 		53239CD525AA374600034A97 /* UIWindow-AjmoClone.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53239CD425AA374600034A97 /* UIWindow-AjmoClone.swift */; };
@@ -24,14 +24,14 @@
 		53239D2C25AC232D00034A97 /* QueryBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53239D2B25AC232D00034A97 /* QueryBuilder.swift */; };
 		53239D2F25AC271E00034A97 /* JSONEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53239D2E25AC271E00034A97 /* JSONEncoder.swift */; };
 		53239D3225AC275800034A97 /* JSONFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53239D3125AC275800034A97 /* JSONFormatter.swift */; };
-		53239F7325ACE9A700034A97 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 53239F7225ACE9A700034A97 /* Alamofire */; };
-		53239F7525ACE9A700034A97 /* Promises in Frameworks */ = {isa = PBXBuildFile; productRef = 53239F7425ACE9A700034A97 /* Promises */; };
+		53239F7325ACE9A700034A97 /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = 53239F7225ACE9A700034A97 /* SwiftPackageProductDependency */; };
+		53239F7525ACE9A700034A97 /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = 53239F7425ACE9A700034A97 /* SwiftPackageProductDependency */; };
 		53239FA125ACF5D800034A97 /* DiscoverContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53239F9C25ACF5D800034A97 /* DiscoverContentView.swift */; };
 		53239FA225ACF5D800034A97 /* DiscoverPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53239F9D25ACF5D800034A97 /* DiscoverPresenter.swift */; };
 		53239FA325ACF5D800034A97 /* DiscoverRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53239F9E25ACF5D800034A97 /* DiscoverRouter.swift */; };
 		53239FA425ACF5D800034A97 /* DiscoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53239F9F25ACF5D800034A97 /* DiscoverViewController.swift */; };
 		53239FA525ACF5D800034A97 /* DiscoverInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53239FA025ACF5D800034A97 /* DiscoverInteractor.swift */; };
-		53239FAB25ACFB0300034A97 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 53239FAA25ACFB0300034A97 /* SnapKit */; };
+		53239FAB25ACFB0300034A97 /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = 53239FAA25ACFB0300034A97 /* SwiftPackageProductDependency */; };
 		53239FB525AD941200034A97 /* DiscoverNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53239FB425AD941200034A97 /* DiscoverNetworkService.swift */; };
 		53239FDE25AD9A7000034A97 /* Model.h in Headers */ = {isa = PBXBuildFile; fileRef = 53239FDC25AD9A7000034A97 /* Model.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		53239FE125AD9A7000034A97 /* Model.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53239FDA25AD9A7000034A97 /* Model.framework */; };
@@ -170,9 +170,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				53239FE125AD9A7000034A97 /* Model.framework in Frameworks */,
-				53239FAB25ACFB0300034A97 /* SnapKit in Frameworks */,
+				53239FAB25ACFB0300034A97 /* BuildFile in Frameworks */,
 				53239D0425AB404A00034A97 /* Networking.framework in Frameworks */,
-				53239CC425AA159500034A97 /* Kingfisher in Frameworks */,
+				53239CC425AA159500034A97 /* BuildFile in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -180,8 +180,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				53239F7525ACE9A700034A97 /* Promises in Frameworks */,
-				53239F7325ACE9A700034A97 /* Alamofire in Frameworks */,
+				53239F7525ACE9A700034A97 /* BuildFile in Frameworks */,
+				53239F7325ACE9A700034A97 /* BuildFile in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -202,7 +202,6 @@
 				53239CFE25AB404A00034A97 /* Networking */,
 				53239FDB25AD9A7000034A97 /* Model */,
 				53239CA625AA011200034A97 /* Products */,
-				53239F3125ACCD0400034A97 /* Frameworks */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -372,13 +371,6 @@
 				53239D3125AC275800034A97 /* JSONFormatter.swift */,
 			);
 			path = Utility;
-			sourceTree = "<group>";
-		};
-		53239F3125ACCD0400034A97 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		53239F7725ACF04700034A97 /* Responses */ = {
@@ -613,8 +605,8 @@
 			);
 			name = AjmoClone;
 			packageProductDependencies = (
-				53239CC325AA159500034A97 /* Kingfisher */,
-				53239FAA25ACFB0300034A97 /* SnapKit */,
+				53239CC325AA159500034A97 /* SwiftPackageProductDependency */,
+				53239FAA25ACFB0300034A97 /* SwiftPackageProductDependency */,
 			);
 			productName = AjmoClone;
 			productReference = 53239CA525AA011200034A97 /* AjmoClone.app */;
@@ -635,8 +627,8 @@
 			);
 			name = Networking;
 			packageProductDependencies = (
-				53239F7225ACE9A700034A97 /* Alamofire */,
-				53239F7425ACE9A700034A97 /* Promises */,
+				53239F7225ACE9A700034A97 /* SwiftPackageProductDependency */,
+				53239F7425ACE9A700034A97 /* SwiftPackageProductDependency */,
 			);
 			productName = Networking;
 			productReference = 53239CFD25AB404A00034A97 /* Networking.framework */;
@@ -693,10 +685,10 @@
 			);
 			mainGroup = 53239C9C25AA011200034A97;
 			packageReferences = (
-				53239CBE25AA05D200034A97 /* XCRemoteSwiftPackageReference "Alamofire" */,
-				53239CC225AA159500034A97 /* XCRemoteSwiftPackageReference "Kingfisher" */,
-				53239F2825ACCB1700034A97 /* XCRemoteSwiftPackageReference "promises" */,
-				53239FA925ACFB0300034A97 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				53239CBE25AA05D200034A97 /* RemoteSwiftPackageReference */,
+				53239CC225AA159500034A97 /* RemoteSwiftPackageReference */,
+				53239F2825ACCB1700034A97 /* RemoteSwiftPackageReference */,
+				53239FA925ACFB0300034A97 /* RemoteSwiftPackageReference */,
 			);
 			productRefGroup = 53239CA625AA011200034A97 /* Products */;
 			projectDirPath = "";
@@ -1174,7 +1166,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		53239CBE25AA05D200034A97 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+		53239CBE25AA05D200034A97 /* RemoteSwiftPackageReference */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
 			requirement = {
@@ -1182,7 +1174,7 @@
 				minimumVersion = 5.4.1;
 			};
 		};
-		53239CC225AA159500034A97 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+		53239CC225AA159500034A97 /* RemoteSwiftPackageReference */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
 			requirement = {
@@ -1190,7 +1182,7 @@
 				minimumVersion = 6.0.1;
 			};
 		};
-		53239F2825ACCB1700034A97 /* XCRemoteSwiftPackageReference "promises" */ = {
+		53239F2825ACCB1700034A97 /* RemoteSwiftPackageReference */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/google/promises";
 			requirement = {
@@ -1198,7 +1190,7 @@
 				minimumVersion = 1.2.12;
 			};
 		};
-		53239FA925ACFB0300034A97 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+		53239FA925ACFB0300034A97 /* RemoteSwiftPackageReference */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SnapKit/SnapKit";
 			requirement = {
@@ -1209,24 +1201,24 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		53239CC325AA159500034A97 /* Kingfisher */ = {
+		53239CC325AA159500034A97 /* SwiftPackageProductDependency */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 53239CC225AA159500034A97 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			package = 53239CC225AA159500034A97 /* RemoteSwiftPackageReference */;
 			productName = Kingfisher;
 		};
-		53239F7225ACE9A700034A97 /* Alamofire */ = {
+		53239F7225ACE9A700034A97 /* SwiftPackageProductDependency */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 53239CBE25AA05D200034A97 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			package = 53239CBE25AA05D200034A97 /* RemoteSwiftPackageReference */;
 			productName = Alamofire;
 		};
-		53239F7425ACE9A700034A97 /* Promises */ = {
+		53239F7425ACE9A700034A97 /* SwiftPackageProductDependency */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 53239F2825ACCB1700034A97 /* XCRemoteSwiftPackageReference "promises" */;
+			package = 53239F2825ACCB1700034A97 /* RemoteSwiftPackageReference */;
 			productName = Promises;
 		};
-		53239FAA25ACFB0300034A97 /* SnapKit */ = {
+		53239FAA25ACFB0300034A97 /* SwiftPackageProductDependency */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 53239FA925ACFB0300034A97 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			package = 53239FA925ACFB0300034A97 /* RemoteSwiftPackageReference */;
 			productName = SnapKit;
 		};
 /* End XCSwiftPackageProductDependency section */

@@ -22,6 +22,6 @@ extension AppRouter: Router {
 
 extension AppRouter {
   func initialViewController() -> UIViewController {
-    return DiscoverRouter.createModule(delegate: nil)
+    return UINavigationController(rootViewController: DiscoverRouter.createModule(delegate: nil))
   }
 }

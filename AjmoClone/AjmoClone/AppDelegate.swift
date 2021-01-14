@@ -18,9 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
       .execute(process: AppearanceCustomisationStartupProcess())
 
     window = UIWindow(frame: UIScreen.main.bounds)
-    let initialViewController = appRouter.initialViewController()
-    let navigationController = UINavigationController(rootViewController: initialViewController)
-    window?.rootViewController = navigationController
+    window?.rootViewController = appRouter.initialViewController()
     window?.makeKeyAndVisible()
     return true
   }

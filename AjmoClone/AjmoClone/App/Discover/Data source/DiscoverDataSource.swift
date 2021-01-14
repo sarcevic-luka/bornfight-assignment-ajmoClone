@@ -152,7 +152,6 @@ private extension DiscoverDataSource {
     distanceFormater.unitStyle = .abbreviated
     let distance = curentPosition.distance(from: location)
     distanceFormater.string(fromDistance: distance)
-    print(distanceFormater.string(fromDistance: distance))
     return distanceFormater.string(fromDistance: distance)
   }
 }

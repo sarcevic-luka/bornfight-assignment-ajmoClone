@@ -25,7 +25,6 @@ public extension UICollectionView {
 
   func dequeueReusableCell<T: UICollectionViewCell>(_ cell: T.Type, at indexPath: IndexPath) -> T {
     guard let cell = dequeueReusableCell(withReuseIdentifier: T.defaultReuseIdentifier, for: indexPath) as? T else {
-      print("Could not dequeue cell with identifier: \(T.defaultReuseIdentifier). Creating new instance.")
       return T()
     }
     return cell
