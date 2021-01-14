@@ -11,6 +11,8 @@ import SnapKit
 
 protocol DiscoverDisplayLogic: class {
   func displayDiscoveryDetails(using dataSource: DiscoverDataSource)
+  func displayGenericErrorMessagePopup()
+  func displayRefreshControlRefreshComplete()
 }
 
 class DiscoverViewController: UIViewController {
@@ -26,6 +28,7 @@ class DiscoverViewController: UIViewController {
     super.viewDidLoad()
     setupView()
     setupNavigationBar()
+    contentView.collectionView.refreshControl?.beginRefreshing()
     presenter?.onViewLoaded()
   }
 }
@@ -35,6 +38,14 @@ extension DiscoverViewController: DiscoverDisplayLogic {
   func displayDiscoveryDetails(using dataSource: DiscoverDataSource) {
     self.dataSource = dataSource
     contentView.collectionView.reloadData()
+  }
+  
+  func displayGenericErrorMessagePopup() {
+//    presentMessagePopup(.genericErrorMessage(), animated: true)
+  }
+  
+  func displayRefreshControlRefreshComplete() {
+    contentView.collectionView.refreshControl?.endRefreshing()
   }
 }
 
@@ -46,6 +57,10 @@ private extension DiscoverViewController {
   func setupContentView() {
     contentView.collectionView.dataSource = self
     contentView.compositionalLayout.layoutDelegate = self
+    
+    contentView.refreshControlRefreshHandler = { [weak self] in
+      self?.presenter?.onRefreshControlRefresh()
+    }
   }
 }
 

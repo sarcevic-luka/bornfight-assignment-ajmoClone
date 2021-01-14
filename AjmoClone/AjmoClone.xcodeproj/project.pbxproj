@@ -64,6 +64,7 @@
 		5323A0B125AF337F00034A97 /* Collection-AjmoClone.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5323A0B025AF337F00034A97 /* Collection-AjmoClone.swift */; };
 		5362CAD825AFB15100DB2288 /* Pick.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5362CAD725AFB15100DB2288 /* Pick.swift */; };
 		5362CAEF25B0522700DB2288 /* Discover-CollectionLayouts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5362CAEE25B0522700DB2288 /* Discover-CollectionLayouts.swift */; };
+		5362CB1025B0A0DF00DB2288 /* ColorAssets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5362CB0F25B0A0DF00DB2288 /* ColorAssets.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -154,6 +155,7 @@
 		5323A0B025AF337F00034A97 /* Collection-AjmoClone.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection-AjmoClone.swift"; sourceTree = "<group>"; };
 		5362CAD725AFB15100DB2288 /* Pick.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pick.swift; sourceTree = "<group>"; };
 		5362CAEE25B0522700DB2288 /* Discover-CollectionLayouts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Discover-CollectionLayouts.swift"; sourceTree = "<group>"; };
+		5362CB0F25B0A0DF00DB2288 /* ColorAssets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorAssets.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -282,9 +284,9 @@
 		53239CD325AA372F00034A97 /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
-				53239CD425AA374600034A97 /* UIWindow-AjmoClone.swift */,
 				5323A01D25AE4CEE00034A97 /* CollectionView.swift */,
 				5323A04E25AEFECB00034A97 /* UIColor-AjmoClone.swift */,
+				53239CD425AA374600034A97 /* UIWindow-AjmoClone.swift */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -499,6 +501,7 @@
 		5323A03425AEC59F00034A97 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				5362CB0425B0A01400DB2288 /* Colors */,
 				5323A03525AEC5A800034A97 /* Images */,
 			);
 			path = Assets;
@@ -536,6 +539,14 @@
 				5323A0B025AF337F00034A97 /* Collection-AjmoClone.swift */,
 			);
 			path = Foundation;
+			sourceTree = "<group>";
+		};
+		5362CB0425B0A01400DB2288 /* Colors */ = {
+			isa = PBXGroup;
+			children = (
+				5362CB0F25B0A0DF00DB2288 /* ColorAssets.swift */,
+			);
+			path = Colors;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -713,6 +724,7 @@
 				5323A03B25AEC72900034A97 /* ImageAsset-Protocol.swift in Sources */,
 				53239FA325ACF5D800034A97 /* DiscoverRouter.swift in Sources */,
 				5323A01825AE4BD900034A97 /* HeaderView.swift in Sources */,
+				5362CB1025B0A0DF00DB2288 /* ColorAssets.swift in Sources */,
 				5323A02F25AE587100034A97 /* PromoCell.swift in Sources */,
 				5323A05325AF148100034A97 /* VenueCategoryCell.swift in Sources */,
 				5323A0AC25AF30A400034A97 /* DataSourceProtocol.swift in Sources */,

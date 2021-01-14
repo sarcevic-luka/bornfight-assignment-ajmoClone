@@ -12,6 +12,7 @@ protocol DiscoverViewPresentingLogic: class {
   func onViewLoaded()
   func onHeaderViewAllNewsTapped()
   func onItemSelected(at indexPath: IndexPath)
+  func onRefreshControlRefresh()
 }
 
 class DiscoverPresenter {
@@ -37,7 +38,12 @@ extension DiscoverPresenter: DiscoverViewPresentingLogic {
   }
   
   func onItemSelected(at indexPath: IndexPath) {
+    print(indexPath)
     #warning("Implementation would go here")
+  }
+  
+  func onRefreshControlRefresh() {
+    fetchAndPresentDiscoverDetails()
   }
 }
 
@@ -50,5 +56,7 @@ private extension DiscoverPresenter {
         dataSource.setLocationManager()
         self?.view?.displayDiscoveryDetails(using: dataSource)
       }
+      .catch { [weak self] _ in self?.view?.displayGenericErrorMessagePopup() }
+      .always { [weak self] in self?.view?.displayRefreshControlRefreshComplete() }
   }
 }

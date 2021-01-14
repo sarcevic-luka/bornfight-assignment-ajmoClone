@@ -32,13 +32,3 @@ extension UIColor {
               alpha: alpha)
   }
 }
-
-extension UIColor {
-    struct Blue {
-        static let lightBlue = UIColor(hex: "0x4B94EE")
-    }
-
-    struct Yellow {
-        static let golden = UIColor(netHex: 0xC0C0C0)
-    }
-}

@@ -9,6 +9,7 @@
 import UIKit
 
 class DiscoverContentView: UIView {
+  var refreshControlRefreshHandler: Action?
   private(set) lazy var compositionalLayout = DiscoverLayout()
   private(set) lazy var collectionView = UICollectionView(frame: .zero, collectionViewLayout: compositionalLayout.layout)
 
@@ -23,6 +24,12 @@ class DiscoverContentView: UIView {
 }
 
 // MARK: - Private Methods
+private extension DiscoverContentView {
+  @objc func refreshControlValueChanged() {
+    refreshControlRefreshHandler?()
+  }
+}
+
 private extension DiscoverContentView {
   func setupViews() {
     setupView()
@@ -46,5 +53,7 @@ private extension DiscoverContentView {
     collectionView.register(VenueCategoryCell.self)
     collectionView.register(VenueTagCell.self)
     collectionView.registerSupplementaryView(HeaderView.self, kind: UICollectionView.elementKindSectionHeader)
+    collectionView.refreshControl = UIRefreshControl()
+    collectionView.refreshControl?.addTarget(self, action: #selector(refreshControlValueChanged), for: .valueChanged)
   }
 }
