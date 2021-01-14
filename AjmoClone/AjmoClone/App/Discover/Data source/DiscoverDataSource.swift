@@ -17,30 +17,7 @@ enum DiscoverDataSourceItem {
   case venueCategory(VenueCategoryCell.ViewModel)
 }
 
-enum DiscoverDataSourceSection: SectionProtocol {
-  enum Proxy {
-    case promo
-    case news
-    case venue(title: String)
-    case venueTag
-    case venueCategory
-    
-    var title: String? {
-      switch self {
-      case .promo:
-        return "Discover"
-      case .news:
-        return "What's up?"
-      case .venue(let title):
-        return title
-      case .venueTag:
-        return nil
-      case .venueCategory:
-        return "Venues"
-      }
-    }
-  }
-  
+enum DiscoverDataSourceSection: SectionProtocol {  
   case promo(String, DiscoverDataSourceItem)
   case news(String, [DiscoverDataSourceItem])
   case venue(String, [DiscoverDataSourceItem])
@@ -63,7 +40,7 @@ class DiscoverDataSource: NSObject, DataSourceProtocol {
   private let customPicks: [Pick]
   private let maxNumberOfItemsShown = 8
   private var currentLocation: CLLocation?
-  private let dateFormatter = CalendarDateFormatter()
+  private let dateFormatter = TimeDateFormatter()
   private(set) lazy var sections = [DiscoverDataSourceSection]()
   private(set) var locationManager = CLLocationManager()
   
@@ -71,6 +48,9 @@ class DiscoverDataSource: NSObject, DataSourceProtocol {
     news = newsList
     venueCategories = venuesData.venueCategories
     customPicks = venuesData.customPicks
+    super.init()
+    setLocationManager()
+    buildSections()
   }
 }
 
@@ -81,17 +61,20 @@ extension DiscoverDataSource {
       locationManager = CLLocationManager()
       locationManager.delegate = self
       locationManager.desiredAccuracy = kCLLocationAccuracyBest
-      locationManager.requestAlwaysAuthorization()
+      locationManager.requestWhenInUseAuthorization()
       locationManager.startUpdatingLocation()
     }
   }
   
   func buildSections() {
-    if let promoSection = createPromoSection(),
-       let newsSection = createNewsSection(),
-       let venueSections = createVenueAndVenueTypesSections() {
+    sections.removeAll()
+    if let promoSection = createPromoSection() {
       sections.append(promoSection)
+    }
+    if let newsSection = createNewsSection() {
       sections.append(newsSection)
+    }
+    if let venueSections = createVenueAndVenueTypesSections() {
       sections.append(contentsOf: venueSections)
     }
   }
@@ -161,7 +144,7 @@ private extension DiscoverDataSource {
   }
   
   func createNewsDataItem(with news: News) -> DiscoverDataSourceItem {
-    .news(NewsCell.ViewModel(news.title, news.imageUrl, news.description, news.createdAt))
+    .news(NewsCell.ViewModel(news.title, news.imageUrl, news.caption, news.createdAt))
   }
   
   func createVenueDataItem(with venue: Venue) -> DiscoverDataSourceItem {
@@ -172,44 +155,10 @@ private extension DiscoverDataSource {
   func createVenueTagsDataItem(with venueTag: Tag) -> DiscoverDataSourceItem {
     .venueTag(VenueTagCell.ViewModel(venueTag.name, UIColor(hex: venueTag.color)))
   }
-  
-  // Quite ugly, meh.
-  //  func indexPath(forItemWithTitle title: String) -> IndexPath? {
-  //    guard let indexOf = sections.firstIndex(where: { section in
-  //      switch section {
-  //      case .about(_, let item), .genre(_, let item), .instruments(_, let item), .rules(_, let item):
-  //        if case let ArtistProfileDataSourceItem.expandableText(viewModel) = item, viewModel.title == title {
-  //          return true
-  //        } else {
-  //          return false
-  //        }
-  //      default:
-  //        return false
-  //      }
-  //    }) else {
-  //      return nil
-  //    }
-  //    return IndexPath(row: 0, section: indexOf)
-  //  }
 }
 
+// This could also go to dedicated manager
 private extension DiscoverDataSource {
-  func flattenedArray(array: [Any]) -> [DiscoverDataSourceSection] {
-    var myArray = [DiscoverDataSourceSection]()
-    for element in array {
-      if let element = element as? DiscoverDataSourceSection {
-        myArray.append(element)
-      }
-      if let element = element as? [DiscoverDataSourceSection] {
-        let result = flattenedArray(array: element)
-        for i in result {
-          myArray.append(i)
-        }
-      }
-    }
-    return myArray
-  }
-  
   /// Calculates distance from current location
   /// - Parameter location: venue location
   /// - Returns: distance in km

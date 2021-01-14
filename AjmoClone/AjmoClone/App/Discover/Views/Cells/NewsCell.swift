@@ -32,12 +32,16 @@ extension NewsCell {
   func update(_ viewModel: ViewModel) {
     if let newsPictureUrl = viewModel.imageUrl {
       newsImageView.kf.setImage(with: newsPictureUrl, options: [.transition(.fade(0.25))])
+    } else {
+      newsImageView.image = ImageAssets.Images.landscapePlaceholder.image
     }
     titleLabel.text = viewModel.title
     descriptionLabel.text = viewModel.description ?? ""
     // Hardcoded, but left open to extending ViewModel - it looks like it shouldn't be fixed
     typeLabel.text = "Event"
-    publishedLabel.text = CalendarDateFormatter().string(from: Date(timeIntervalSince1970: TimeInterval(viewModel.createdAt)), using: .dayMonthYearDoted)
+    let startDate = Date(timeIntervalSince1970: TimeInterval(viewModel.createdAt))
+    let formatedDate = TimeDateFormatter().string(from: startDate, using: .dayMonthYearDoted)
+    publishedLabel.text = " - published: " + formatedDate
   }
 }
 
@@ -81,18 +85,18 @@ private extension NewsCell {
   func setupTitleLabel() {
     containerView.addSubview(titleLabel)
     titleLabel.snp.makeConstraints {
-      $0.top.equalTo(newsImageView.snp.bottom).inset(10)
+      $0.top.greaterThanOrEqualTo(newsImageView.snp.bottom)
       $0.leading.trailing.equalToSuperview().inset(12)
     }
     titleLabel.font = .systemFont(ofSize: 20, weight: .semibold)
-    titleLabel.numberOfLines = 0
+    titleLabel.numberOfLines = 2
     titleLabel.textColor = .black
   }
   
   func setupDescriptionLabel() {
     containerView.addSubview(descriptionLabel)
     descriptionLabel.snp.makeConstraints {
-      $0.top.equalTo(titleLabel.snp.bottom).inset(2)
+      $0.top.equalTo(titleLabel.snp.bottom).offset(12)
       $0.leading.trailing.equalToSuperview().inset(12)
     }
     descriptionLabel.font = .systemFont(ofSize: 12)
@@ -103,7 +107,7 @@ private extension NewsCell {
   func setupTypeLabel() {
     containerView.addSubview(typeLabel)
     typeLabel.snp.makeConstraints {
-      $0.top.equalTo(descriptionLabel.snp.bottom).inset(-8)
+      $0.top.equalTo(descriptionLabel.snp.bottom).inset(-12)
       $0.leading.equalToSuperview().inset(12)
       $0.bottom.equalToSuperview().inset(12)
     }
@@ -115,7 +119,9 @@ private extension NewsCell {
     containerView.addSubview(publishedLabel)
     publishedLabel.snp.makeConstraints {
       $0.top.equalTo(descriptionLabel.snp.bottom).inset(-8)
-      $0.bottom.trailing.equalToSuperview().inset(12)
+      $0.bottom.equalToSuperview().inset(12)
+      $0.leading.equalTo(typeLabel.snp.trailing).inset(-4)
+
     }
     publishedLabel.textAlignment = .right
     publishedLabel.font = .systemFont(ofSize: 12)

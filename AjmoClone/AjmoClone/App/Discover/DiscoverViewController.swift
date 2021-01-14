@@ -45,7 +45,7 @@ private extension DiscoverViewController {
   
   func setupContentView() {
     contentView.collectionView.dataSource = self
-    contentView.collectionView.delegate = self
+    contentView.compositionalLayout.layoutDelegate = self
   }
 }
 
@@ -90,11 +90,11 @@ extension DiscoverViewController: UICollectionViewDataSource {
   }
   
   func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
-    guard let section = dataSource?.section(at: indexPath.item) else {
+    guard let section = dataSource?.section(at: indexPath.section) else {
       return UICollectionReusableView()
     }
     switch section {
-    case .news(let title, _), .venue(let title, _):
+    case .news(let title, _), .venue(let title, _), .promo(let title, _):
       let header = collectionView.dequeueReusableSupplementaryView(HeaderView.self, ofKind: kind, forIndexPath: indexPath)
       header.update(HeaderView.ViewModel(title, nil))
       return header
@@ -104,18 +104,9 @@ extension DiscoverViewController: UICollectionViewDataSource {
   }
 }
 
-// TODO: - UICollectionViewDelegateFlowLayout - replace 
-extension DiscoverViewController: UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
-  func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-    if indexPath.section == 0 {
-      let height: CGFloat = 266
-      let insets = contentView.flowLayout.sectionInset
-      return CGSize(width: collectionView.bounds.width - insets.left - insets.right, height: height)
-    } else {
-      let height: CGFloat = 380
-      let insets = contentView.flowLayout.sectionInset
-      return CGSize(width: collectionView.bounds.width - insets.left - insets.right, height: height)
-    }
+extension DiscoverViewController: DiscoverLayoutSectionDelegate {
+  func layoutSectionType(for sectionIndex: Int) -> DiscoverDataSourceSection? {
+    dataSource?.section(at: sectionIndex)
   }
 }
 

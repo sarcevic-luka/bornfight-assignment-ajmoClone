@@ -69,7 +69,7 @@ private extension VenueCell {
     containerView.addSubview(venueImageView)
     venueImageView.snp.makeConstraints {
       $0.leading.top.trailing.equalToSuperview()
-      $0.height.equalTo(containerView.snp.width).multipliedBy(0.7)
+      $0.height.equalTo(containerView.snp.width).multipliedBy(0.6)
     }
     venueImageView.image = ImageAssets.Images.landscapePlaceholder.image
   }

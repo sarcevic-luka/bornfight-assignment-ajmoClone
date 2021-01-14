@@ -7,17 +7,17 @@
 
 import Foundation
 
-final class CalendarDateFormatter {
+final class TimeDateFormatter {
   enum DateFormat: String {
-    case dayMonthYearDoted = "yyyy'.MM'.dd"
+    case dayMonthYearDoted = "dd.MM.yyyy"
   }
 
   private static var dateFormatter = DateFormatter()
 }
 
-extension CalendarDateFormatter {
+extension TimeDateFormatter {
   func string(from date: Date, using format: DateFormat) -> String {
-    Self.dateFormatter.dateFormat = DateFormatter.dateFormat(fromTemplate: format.rawValue, options: 0, locale: Locale.current)
+    Self.dateFormatter.dateFormat = format.rawValue
     return Self.dateFormatter.string(from: date)
   }
 }

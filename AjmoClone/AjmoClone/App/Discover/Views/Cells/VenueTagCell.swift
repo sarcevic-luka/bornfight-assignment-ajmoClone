@@ -46,7 +46,7 @@ private extension VenueTagCell {
   func setupContainerView() {
     contentView.addSubview(containerView)
     containerView.snp.makeConstraints {
-      $0.edges.equalToSuperview().inset(5)
+      $0.edges.equalToSuperview()
     }
     containerView.layer.borderWidth = 1
     containerView.layer.borderColor = UIColor.darkGray.cgColor

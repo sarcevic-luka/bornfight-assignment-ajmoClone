@@ -9,8 +9,8 @@
 import UIKit
 
 class DiscoverContentView: UIView {
-  private(set) lazy var flowLayout = UICollectionViewFlowLayout()
-  private(set) lazy var collectionView = UICollectionView(frame: .zero, collectionViewLayout: flowLayout)
+  private(set) lazy var compositionalLayout = DiscoverLayout()
+  private(set) lazy var collectionView = UICollectionView(frame: .zero, collectionViewLayout: compositionalLayout.layout)
 
   override init(frame: CGRect) {
     super.init(frame: frame)
