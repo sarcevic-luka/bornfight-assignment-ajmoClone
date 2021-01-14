@@ -10,8 +10,8 @@ import Foundation
 public struct News {
   public let id: Int
   public let links: [Link]
-  public let imageUrl: String
-  public let shareLink: String
+  public let imageUrl: URL?
+  public let shareLink: URL
   public let isHighlighted: Bool
   public let caption: String
   public let isPromoted: Int

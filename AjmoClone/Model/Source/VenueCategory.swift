@@ -9,7 +9,7 @@ import Foundation
 
 public struct VenueCategory {
   public let id: Int
-  public let image: String
+  public let image: URL
   public let name: String
 }
 

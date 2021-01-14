@@ -31,12 +31,13 @@ extension DiscoverPresenter: DiscoverViewPresentingLogic {
   func onViewLoaded() {
     fetchAndPresentDiscoverDetails()
   }
+  
   func onHeaderViewAllNewsTapped() {
-    #warning("Implementation pending")
+    #warning("Implementation would go here")
   }
   
   func onItemSelected(at indexPath: IndexPath) {
-    #warning("Implementation pending")
+    #warning("Implementation would go here")
   }
 }
 

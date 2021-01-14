@@ -10,7 +10,7 @@ import Foundation
 public struct Venue {
   public let id: Int
   public let subtitle: String
-  public let pictureUrl: String
+  public let pictureUrl: URL?
   public let venueCategories: [VenueCategory]
   public let primaryTagGroup: String
   public let allTags: Tags
@@ -82,6 +82,6 @@ public extension Venue {
 public extension Venue {
   struct GalleryImage: Decodable {
     public let id: Int
-    public let picture: String
+    public let picture: URL
   }
 }

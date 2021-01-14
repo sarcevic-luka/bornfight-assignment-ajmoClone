@@ -10,7 +10,6 @@ import Kingfisher
 
 class PromoCell: UICollectionViewCell {
   typealias ViewModel = (highlightedText: String, imageUrl: URL?, title: String, caption: String)
-  
   private lazy var promoImageView = UIImageView()
   private lazy var highlightedView = UIView()
   private lazy var highlightedTextLabel = UILabel()
@@ -107,7 +106,7 @@ private extension PromoCell {
     captionLabel.textColor = .white
     captionLabel.font = .systemFont(ofSize: 16)
   }
-
+  
   func setupTitleLabel() {
     promoImageView.addSubview(titleLabel)
     titleLabel.snp.makeConstraints {
