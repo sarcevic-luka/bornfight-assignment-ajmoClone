@@ -64,7 +64,7 @@ private extension HeaderView {
       $0.leading.equalToSuperview().inset(16)
       $0.centerY.equalToSuperview()
     }
-    titleLabel.font = .systemFont(ofSize: 20, weight: .bold)
+    titleLabel.font = .systemFont(ofSize: 22, weight: .bold)
     titleLabel.textColor = .black
     titleLabel.textAlignment = .left
   }

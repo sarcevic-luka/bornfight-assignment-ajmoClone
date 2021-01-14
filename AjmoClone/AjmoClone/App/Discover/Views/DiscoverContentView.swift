@@ -9,6 +9,9 @@
 import UIKit
 
 class DiscoverContentView: UIView {
+  private(set) lazy var flowLayout = UICollectionViewFlowLayout()
+  private(set) lazy var collectionView = UICollectionView(frame: .zero, collectionViewLayout: flowLayout)
+
   override init(frame: CGRect) {
     super.init(frame: frame)
     setupViews()
@@ -21,5 +24,26 @@ class DiscoverContentView: UIView {
 
 // MARK: - Private Methods
 private extension DiscoverContentView {
-  func setupViews() { }
+  func setupViews() {
+    setupView()
+    setupCollectionView()
+  }
+  
+  func setupView() {
+    backgroundColor = .white
+  }
+
+  func setupCollectionView() {
+    addSubview(collectionView)
+    collectionView.snp.makeConstraints {
+      $0.edges.equalToSuperview()
+    }
+    collectionView.backgroundView = UIImageView(image: ImageAssets.Images.backgroundPattern.image)
+    collectionView.alwaysBounceVertical = true
+    collectionView.register(NewsCell.self)
+    collectionView.register(PromoCell.self)
+    collectionView.register(VenueCell.self)
+    collectionView.register(VenueCategoryCell.self)
+    collectionView.register(VenueTagCell.self)
+  }
 }

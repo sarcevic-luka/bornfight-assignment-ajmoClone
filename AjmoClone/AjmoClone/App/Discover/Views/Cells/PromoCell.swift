@@ -34,8 +34,8 @@ extension PromoCell {
     if let promoPictureUrl = viewModel.imageUrl {
       promoImageView.kf.setImage(with: promoPictureUrl, options: [.transition(.fade(0.25))])
     }
-    titleLabel.text = viewModel.title
-    captionLabel.text = viewModel.caption
+    titleLabel.text = viewModel.caption
+    captionLabel.text = viewModel.title
   }
 }
 
@@ -58,22 +58,23 @@ private extension PromoCell {
   func setupPromoImageView() {
     contentView.addSubview(promoImageView)
     promoImageView.snp.makeConstraints {
-      $0.edges.equalToSuperview().inset(24)
+      $0.edges.equalToSuperview().inset(20)
     }
-    promoImageView.layer.cornerRadius = 5
-    promoImageView.clipsToBounds = false
+    promoImageView.layer.cornerRadius = 12
+    promoImageView.clipsToBounds = true
+    promoImageView.image = ImageAssets.Images.landscapePlaceholder.image
   }
   
   func setupHighlightedView() {
     contentView.addSubview(highlightedView)
     highlightedView.snp.makeConstraints {
-      $0.top.equalToSuperview().inset(12)
-      $0.height.equalTo(25)
-      $0.edges.equalToSuperview().inset(24)
+      $0.top.equalToSuperview().inset(30)
+      $0.leading.equalToSuperview().inset(12)
+      $0.height.equalTo(28)
     }
-    highlightedView.layer.cornerRadius = 2
+    highlightedView.layer.cornerRadius = 4
     highlightedView.clipsToBounds = true
-    promoImageView.backgroundColor = .blue
+    highlightedView.backgroundColor = .blue
   }
   
   func setupHighlightedImageView() {
@@ -83,7 +84,7 @@ private extension PromoCell {
       $0.size.equalTo(18)
       $0.centerY.equalToSuperview()
     }
-    highlightedIconImageView.image = ImageAssets.Icons.chalice.image
+    highlightedIconImageView.image = ImageAssets.Icons.chalice.image.withTintColor(.white)
     highlightedIconImageView.contentMode = .scaleAspectFit
     highlightedIconImageView.tintColor = .white
   }
@@ -91,29 +92,31 @@ private extension PromoCell {
   func setupHighlightedTextLabel() {
     highlightedView.addSubview(highlightedTextLabel)
     highlightedTextLabel.snp.makeConstraints {
-      $0.leading.equalTo(highlightedIconImageView.snp.trailing).inset(5)
+      $0.leading.equalTo(highlightedIconImageView.snp.trailing).offset(8)
+      $0.trailing.equalToSuperview().inset(12)
       $0.centerY.equalToSuperview()
     }
+    highlightedTextLabel.textAlignment = .left
     highlightedTextLabel.textColor = .white
   }
   
   func setupCaptionLabel() {
     promoImageView.addSubview(captionLabel)
     captionLabel.snp.makeConstraints {
-      $0.leading.equalToSuperview().inset(8)
-      $0.bottom.equalToSuperview().inset(8)
+      $0.bottom.leading.trailing.equalToSuperview().inset(8)
     }
-    captionLabel.textColor = .white
+    captionLabel.textColor = .lightGray
     captionLabel.font = .systemFont(ofSize: 16)
+    captionLabel.numberOfLines = 0
   }
   
   func setupTitleLabel() {
     promoImageView.addSubview(titleLabel)
     titleLabel.snp.makeConstraints {
-      $0.leading.equalToSuperview().inset(8)
-      $0.bottom.equalTo(captionLabel.snp.top).inset(4)
+      $0.leading.trailing.equalToSuperview().inset(8)
+      $0.bottom.equalTo(captionLabel.snp.top).inset(-4)
     }
-    captionLabel.textColor = .white
-    captionLabel.font = .systemFont(ofSize: 20)
+    titleLabel.textColor = .white
+    titleLabel.font = .systemFont(ofSize: 20)
   }
 }

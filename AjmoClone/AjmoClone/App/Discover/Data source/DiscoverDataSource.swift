@@ -58,15 +58,14 @@ enum DiscoverDataSourceSection: SectionProtocol {
 }
 
 class DiscoverDataSource: NSObject, DataSourceProtocol {
-  let news: [News]
-  let venueCategories: [VenueCategory]
-  let customPicks: [Pick]
+  private let news: [News]
+  private let venueCategories: [VenueCategory]
+  private let customPicks: [Pick]
   private let maxNumberOfItemsShown = 8
   private var currentLocation: CLLocation?
   private let dateFormatter = CalendarDateFormatter()
   private(set) lazy var sections = [DiscoverDataSourceSection]()
   private(set) var locationManager = CLLocationManager()
-  
   
   init(newsList: [News], venuesData: Venues) {
     news = newsList
@@ -95,6 +94,7 @@ extension DiscoverDataSource {
       sections.append(newsSection)
       sections.append(contentsOf: venueSections)
     }
+    print(sections.count)
   }
 }
 
@@ -116,10 +116,10 @@ extension DiscoverDataSource: CLLocationManagerDelegate {
 // MARK: - DiscoverDataSourceSection creation
 private extension DiscoverDataSource {
   // This is "wrong" - there was another API call (with isPromoted=1 param)
-  // but for this demonstration I chose to use first promoted item from already
-  // existing array of news
+  // but for this demonstration I chose to use first item from already
+  // existing array of news, mainly for layout testing
   func createPromoSection() -> DiscoverDataSourceSection? {
-    guard let promotedNews = news.first(where: {$0.isPromoted == 1}) else {
+    guard let promotedNews = news.first else {
       return nil
     }
     return .promo("Discover", createPromoDataItem(with: promotedNews))
@@ -158,7 +158,7 @@ private extension DiscoverDataSource {
 // MARK: - DiscoverDataSourceItem creation
 private extension DiscoverDataSource {
   func createPromoDataItem(with news: News) -> DiscoverDataSourceItem {
-    .promo(PromoCell.ViewModel(news.highlightedText, news.imageUrl, news.title, news.caption))
+    return .promo(PromoCell.ViewModel(news.highlightedText, news.imageUrl, news.title, news.caption))
   }
   
   func createNewsDataItem(with news: News) -> DiscoverDataSourceItem {

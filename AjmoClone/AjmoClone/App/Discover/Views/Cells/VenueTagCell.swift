@@ -46,9 +46,11 @@ private extension VenueTagCell {
   func setupContainerView() {
     contentView.addSubview(containerView)
     containerView.snp.makeConstraints {
-      $0.edges.equalToSuperview()
+      $0.edges.equalToSuperview().inset(5)
     }
-    containerView.layer.cornerRadius = 4
+    containerView.layer.borderWidth = 1
+    containerView.layer.borderColor = UIColor.darkGray.cgColor
+    containerView.layer.cornerRadius = 8
     containerView.clipsToBounds = true
   }
     

@@ -43,7 +43,7 @@ private extension VenueCell {
   func setupViews() {
     setupView()
     setupContainerView()
-    setupNewsImageView()
+    setupVenueImageView()
     setupTitleLabel()
     setupDescriptionLabel()
     setupDistanceLabel()
@@ -56,19 +56,22 @@ private extension VenueCell {
   func setupContainerView() {
     contentView.addSubview(containerView)
     containerView.snp.makeConstraints {
-      $0.edges.equalToSuperview()
+      $0.edges.equalToSuperview().inset(10)
     }
-    containerView.layer.cornerRadius = 6
+    containerView.layer.borderWidth = 1
+    containerView.layer.borderColor = UIColor.darkGray.cgColor
+    containerView.layer.cornerRadius = 12
     containerView.clipsToBounds = true
     containerView.backgroundColor = .white
   }
   
-  func setupNewsImageView() {
+  func setupVenueImageView() {
     containerView.addSubview(venueImageView)
     venueImageView.snp.makeConstraints {
       $0.leading.top.trailing.equalToSuperview()
       $0.height.equalTo(containerView.snp.width).multipliedBy(0.7)
     }
+    venueImageView.image = ImageAssets.Images.landscapePlaceholder.image
   }
   
   func setupTitleLabel() {
@@ -77,7 +80,7 @@ private extension VenueCell {
       $0.top.equalTo(venueImageView.snp.bottom).inset(10)
       $0.leading.trailing.equalToSuperview().inset(12)
     }
-    titleLabel.font = .systemFont(ofSize: 12)
+    titleLabel.font = .systemFont(ofSize: 16, weight: .semibold)
     titleLabel.textColor = .black
   }
   

@@ -60,9 +60,11 @@ private extension NewsCell {
   func setupContainerView() {
     contentView.addSubview(containerView)
     containerView.snp.makeConstraints {
-      $0.edges.equalToSuperview()
+      $0.edges.equalToSuperview().inset(10)
     }
-    containerView.layer.cornerRadius = 6
+    containerView.layer.borderWidth = 1
+    containerView.layer.borderColor = UIColor.darkGray.cgColor
+    containerView.layer.cornerRadius = 12
     containerView.clipsToBounds = true
     containerView.backgroundColor = .white
   }
@@ -73,6 +75,7 @@ private extension NewsCell {
       $0.leading.top.trailing.equalToSuperview()
       $0.height.equalTo(containerView.snp.width).multipliedBy(0.7)
     }
+    newsImageView.image = ImageAssets.Images.landscapePlaceholder.image
   }
   
   func setupTitleLabel() {
@@ -81,15 +84,15 @@ private extension NewsCell {
       $0.top.equalTo(newsImageView.snp.bottom).inset(10)
       $0.leading.trailing.equalToSuperview().inset(12)
     }
-    titleLabel.font = .systemFont(ofSize: 16)
-    titleLabel.numberOfLines = 2
+    titleLabel.font = .systemFont(ofSize: 20, weight: .semibold)
+    titleLabel.numberOfLines = 0
     titleLabel.textColor = .black
   }
   
   func setupDescriptionLabel() {
     containerView.addSubview(descriptionLabel)
     descriptionLabel.snp.makeConstraints {
-      $0.top.equalTo(titleLabel.snp.bottom).inset(8)
+      $0.top.equalTo(titleLabel.snp.bottom).inset(2)
       $0.leading.trailing.equalToSuperview().inset(12)
     }
     descriptionLabel.font = .systemFont(ofSize: 12)
@@ -100,21 +103,21 @@ private extension NewsCell {
   func setupTypeLabel() {
     containerView.addSubview(typeLabel)
     typeLabel.snp.makeConstraints {
-      $0.top.equalTo(descriptionLabel.snp.bottom).inset(8)
+      $0.top.equalTo(descriptionLabel.snp.bottom).inset(-8)
       $0.leading.equalToSuperview().inset(12)
       $0.bottom.equalToSuperview().inset(12)
     }
     typeLabel.font = .systemFont(ofSize: 12)
-    typeLabel.textColor = .green
+    typeLabel.textColor = .red
   }
   
   func setupPublishedLabel() {
     containerView.addSubview(publishedLabel)
     publishedLabel.snp.makeConstraints {
-      $0.top.equalTo(descriptionLabel.snp.bottom).inset(8)
-      $0.leading.equalTo(typeLabel.snp.trailing).inset(12)
-      $0.bottom.equalToSuperview().inset(12)
+      $0.top.equalTo(descriptionLabel.snp.bottom).inset(-8)
+      $0.bottom.trailing.equalToSuperview().inset(12)
     }
+    publishedLabel.textAlignment = .right
     publishedLabel.font = .systemFont(ofSize: 12)
     publishedLabel.textColor = .darkGray
   }

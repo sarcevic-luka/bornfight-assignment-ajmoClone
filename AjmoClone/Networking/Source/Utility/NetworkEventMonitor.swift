@@ -26,29 +26,30 @@ extension NetworkEventMonitor: EventMonitor {
       log += "\nBody: \(json)"
     }
 
-    print("🌐 | \(#function) | \(log)")
+//    print("🌐 | \(#function) | \(log)")
   }
 
   internal func request<Value>(_ request: DataRequest, didParseResponse response: DataResponse<Value, AFError>) {
-    guard
-      logsResponses,
-      let data = response.data,
-      let object = try? JSONSerialization.jsonObject(with: data, options: []),
-      let prettyPrintedData = try? JSONSerialization.data(withJSONObject: object, options: [.prettyPrinted]),
-      let jsonString = String(data: prettyPrintedData, encoding: .utf8) else {
-      return
-    }
-    print("🌐 | \(#function)\nResponse: \(jsonString)")
+    // Uncoment when debuging
+//    guard
+//      logsResponses,
+//      let data = response.data,
+//      let object = try? JSONSerialization.jsonObject(with: data, options: []),
+//      let prettyPrintedData = try? JSONSerialization.data(withJSONObject: object, options: [.prettyPrinted]),
+//      let jsonString = String(data: prettyPrintedData, encoding: .utf8) else {
+//      return
+//    }
+//    print("🌐 | \(#function)\nResponse: \(jsonString)")
   }
 
   internal func requestDidFinish(_ request: Alamofire.Request) {
-    guard
-      let urlRequest = request.request,
-      let method = urlRequest.method,
-      let response = request.response,
-      let url = request.response?.url else { return }
-
-    let log = [response.statusCode.description, method.rawValue, url.absoluteString].joined(separator: " ")
-    print("🌐 | \(#function) | \(log)")
+    // Uncoment when debuging
+//    guard
+//      let urlRequest = request.request,
+//      let method = urlRequest.method,
+//      let response = request.response,
+//      let url = request.response?.url else { return }
+//    let log = [response.statusCode.description, method.rawValue, url.absoluteString].joined(separator: " ")
+//    print("🌐 | \(#function) | \(log)")
   }
 }
