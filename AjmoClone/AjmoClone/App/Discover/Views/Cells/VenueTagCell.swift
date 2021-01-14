@@ -1,5 +1,5 @@
 //
-//  VenueTypeCell.swift
+//  VenueTagCell.swift
 //  AjmoClone
 //
 //  Created by Luka Šarčević on 13.01.2021..
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class VenueTypeCell: UICollectionViewCell {
+class VenueTagCell: UICollectionViewCell {
   typealias ViewModel = (title: String, color: UIColor)
   private lazy var containerView = UIView()
   private lazy var titleLabel = UILabel()
@@ -23,7 +23,7 @@ class VenueTypeCell: UICollectionViewCell {
   }
 }
 
-extension VenueTypeCell {
+extension VenueTagCell {
   func update(_ viewModel: ViewModel) {
     titleLabel.text = viewModel.title
     containerView.backgroundColor = viewModel.color
@@ -32,7 +32,7 @@ extension VenueTypeCell {
 }
 
 // MARK: - Private Methods
-private extension VenueTypeCell {
+private extension VenueTagCell {
   func setupViews() {
     setupView()
     setupContainerView()

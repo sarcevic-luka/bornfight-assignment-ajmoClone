@@ -14,6 +14,7 @@ protocol DiscoverDisplayLogic: class { }
 class DiscoverViewController: UIViewController {
   var presenter: DiscoverViewPresentingLogic?
   private lazy var contentView = DiscoverContentView()
+  private var dataSource: DiscoverDataSource?
   
   override func loadView() {
     view = contentView

@@ -9,7 +9,7 @@ import UIKit
 import Kingfisher
 
 class NewsCell: UICollectionViewCell {
-  typealias ViewModel = (title: String, imageUrl: URL?, description: String, type: String, createdAt: TimeInterval)
+  typealias ViewModel = (title: String, imageUrl: URL?, description: String?, createdAt: TimeInterval)
   private lazy var containerView = UIView()
   private lazy var newsImageView = UIImageView()
   private lazy var titleLabel = UILabel()
@@ -34,8 +34,9 @@ extension NewsCell {
       newsImageView.kf.setImage(with: newsPictureUrl, options: [.transition(.fade(0.25))])
     }
     titleLabel.text = viewModel.title
-    descriptionLabel.text = viewModel.description
-    typeLabel.text = viewModel.type
+    descriptionLabel.text = viewModel.description ?? ""
+    // Hardcoded, but left open to extending ViewModel - it looks like it shouldn't be fixed
+    typeLabel.text = "Event"
     publishedLabel.text = CalendarDateFormatter().string(from: Date(timeIntervalSince1970: TimeInterval(viewModel.createdAt)), using: .dayMonthYearDoted)
   }
 }
