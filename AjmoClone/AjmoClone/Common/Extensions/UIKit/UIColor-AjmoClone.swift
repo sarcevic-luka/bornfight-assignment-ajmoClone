@@ -32,20 +32,13 @@ extension UIColor {
               alpha: alpha)
   }
 }
-//    struct Blue {
-//        static let cometLightBlue = UIColor(netHex: 0x4B94EE)
-//        static let cometUltralightBlue = UIColor(netHex: 0xDFEEFE)
-//        static let cometActiveBlue = UIColor(netHex: 0xEBF4FE)
-//        static let cometPassiveBlue = UIColor(netHex: 0x0096FF)
-//    }
-//
-//    struct Gray {
-//        static let cometUltralightGray = UIColor(netHex: 0xC0C0C0)
-//        static let cometLightGray = UIColor(netHex: 0xEEEFF1)
-//        static let cometMediumGray = UIColor(netHex: 0xEEEFF1)
-//        static let cometDarkGray = UIColor(netHex: 0x808591)
-//    }
-//
-//    struct Green {
-//        static let cometGreen = UIColor(netHex: 0x90CD33)
-//    }
+
+extension UIColor {
+    struct Blue {
+        static let lightBlue = UIColor(hex: "0x4B94EE")
+    }
+
+    struct Yellow {
+        static let golden = UIColor(netHex: 0xC0C0C0)
+    }
+}
