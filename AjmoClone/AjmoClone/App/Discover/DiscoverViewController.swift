@@ -41,7 +41,9 @@ extension DiscoverViewController: DiscoverDisplayLogic {
   }
   
   func displayGenericErrorMessagePopup() {
-//    presentMessagePopup(.genericErrorMessage(), animated: true)
+    let alert = UIAlertController(title: "Alert", message: "Fetch failed", preferredStyle: UIAlertController.Style.alert)
+    alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil))
+    self.present(alert, animated: true, completion: nil)
   }
   
   func displayRefreshControlRefreshComplete() {
