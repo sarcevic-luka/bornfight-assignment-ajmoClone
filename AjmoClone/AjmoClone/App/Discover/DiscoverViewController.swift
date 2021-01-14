@@ -21,7 +21,7 @@ class DiscoverViewController: UIViewController {
   override func loadView() {
     view = contentView
   }
-
+  
   override func viewDidLoad() {
     super.viewDidLoad()
     setupView()
@@ -42,7 +42,7 @@ private extension DiscoverViewController {
   func setupView() {
     setupContentView()
   }
-
+  
   func setupContentView() {
     contentView.collectionView.dataSource = self
     contentView.collectionView.delegate = self
@@ -66,22 +66,22 @@ extension DiscoverViewController: UICollectionViewDataSource {
       let cell = collectionView.dequeueReusableCell(NewsCell.self, at: indexPath)
       cell.update(newsViewModel)
       return cell
-
+      
     case .promo(let promoViewModel):
       let cell = collectionView.dequeueReusableCell(PromoCell.self, at: indexPath)
       cell.update(promoViewModel)
       return cell
-
+      
     case .venue(let venueViewModel):
       let cell = collectionView.dequeueReusableCell(VenueCell.self, at: indexPath)
       cell.update(venueViewModel)
       return cell
-
+      
     case .venueTag(let tagViewModel):
       let cell = collectionView.dequeueReusableCell(VenueTagCell.self, at: indexPath)
       cell.update(tagViewModel)
       return cell
-
+      
     case .venueCategory(let categoryViewModel):
       let cell = collectionView.dequeueReusableCell(VenueCategoryCell.self, at: indexPath)
       cell.update(categoryViewModel)
@@ -89,42 +89,34 @@ extension DiscoverViewController: UICollectionViewDataSource {
     }
   }
   
-  
-//  func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
-//    guard let section = dataSource?.section(at: indexPath.item) else {
-//      return UICollectionReusableView()
-//    }
-//
-//    switch (kind, section) {
-//    case (UICollectionView.elementKindSectionHeader, .entries(let headerViewModel, _)):
-//      let header = collectionView.dequeueReusableSupplementaryView(ProfileHeaderView.self, ofKind: kind, forIndexPath: indexPath)
-//      header.update(headerViewModel)
-//      header.tapHandler = { [weak self] in
-//        self?.presenter?.onHeaderViewTapped()
-//      }
-//      header.ratingView.staticReviewsLabelTapHandler = { [weak self] in
-//        self?.presenter?.onHeaderViewReviewsTapped()
-//      }
-//      return header
-//    default:
-//      return UICollectionReusableView()
-//    }
-//  }
+  func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+    guard let section = dataSource?.section(at: indexPath.item) else {
+      return UICollectionReusableView()
+    }
+    switch section {
+    case .news(let title, _), .venue(let title, _):
+      let header = collectionView.dequeueReusableSupplementaryView(HeaderView.self, ofKind: kind, forIndexPath: indexPath)
+      header.update(HeaderView.ViewModel(title, nil))
+      return header
+    default:
+      return UICollectionReusableView()
+    }
+  }
 }
 
 // TODO: - UICollectionViewDelegateFlowLayout - replace 
 extension DiscoverViewController: UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-      if indexPath.section == 0 {
-        let height: CGFloat = 266
-        let insets = contentView.flowLayout.sectionInset
-        return CGSize(width: collectionView.bounds.width - insets.left - insets.right, height: height)
-      } else {
-        let height: CGFloat = 380
-        let insets = contentView.flowLayout.sectionInset
-        return CGSize(width: collectionView.bounds.width - insets.left - insets.right, height: height)
-      }
+  func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+    if indexPath.section == 0 {
+      let height: CGFloat = 266
+      let insets = contentView.flowLayout.sectionInset
+      return CGSize(width: collectionView.bounds.width - insets.left - insets.right, height: height)
+    } else {
+      let height: CGFloat = 380
+      let insets = contentView.flowLayout.sectionInset
+      return CGSize(width: collectionView.bounds.width - insets.left - insets.right, height: height)
     }
+  }
 }
 
 private extension DiscoverViewController {

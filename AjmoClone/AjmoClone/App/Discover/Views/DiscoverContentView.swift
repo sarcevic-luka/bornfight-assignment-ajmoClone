@@ -45,5 +45,6 @@ private extension DiscoverContentView {
     collectionView.register(VenueCell.self)
     collectionView.register(VenueCategoryCell.self)
     collectionView.register(VenueTagCell.self)
+    collectionView.registerSupplementaryView(HeaderView.self, kind: UICollectionView.elementKindSectionHeader)
   }
 }

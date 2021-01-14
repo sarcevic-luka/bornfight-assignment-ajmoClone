@@ -94,7 +94,6 @@ extension DiscoverDataSource {
       sections.append(newsSection)
       sections.append(contentsOf: venueSections)
     }
-    print(sections.count)
   }
 }
 
