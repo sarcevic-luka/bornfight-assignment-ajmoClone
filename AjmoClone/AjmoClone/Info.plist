@@ -4,7 +4,9 @@
 <dict>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
-	<key>NSLocationAlwaysUsageDescription</key>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>By giving permission to AjmoClone to use your location, you enable us to show you events near you.</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>By giving permission to AjmoClone to use your location, you enable us to show you events near you.</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>

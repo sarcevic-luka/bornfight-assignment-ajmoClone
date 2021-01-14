@@ -13,4 +13,9 @@ extension ImageAssets {
   enum Icons: String, ImageAsset {
     case chalice = "chalice"
   }
+  
+  enum Images: String, ImageAsset {
+    case landscapePlaceholder = "landscapePlaceholder"
+    case backgroundPattern = "backgroundPattern"
+  }
 }
