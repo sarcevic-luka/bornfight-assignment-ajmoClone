@@ -16,7 +16,7 @@ final class AppRouter {
 // MARK: Routing
 extension AppRouter: Router {
   var viewController: UIViewController? {
-    UIApplication.shared.windows.filter{ $0.isKeyWindow }.first?.topViewController
+    UIApplication.shared.windows.first(where: { $0.isKeyWindow })?.topViewController
   }
 }
 

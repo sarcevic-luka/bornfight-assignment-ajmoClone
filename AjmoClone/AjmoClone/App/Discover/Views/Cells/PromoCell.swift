@@ -16,12 +16,12 @@ class PromoCell: UICollectionViewCell {
   private lazy var highlightedIconImageView = UIImageView()
   private lazy var titleLabel = UILabel()
   private lazy var captionLabel = UILabel()
-  
+
   override init(frame: CGRect) {
     super.init(frame: frame)
     setupViews()
   }
-  
+
   @available(*, unavailable)
   required init?(coder aDecoder: NSCoder) {
     fatalError("init(coder:) has not been implemented")
@@ -50,11 +50,11 @@ private extension PromoCell {
     setupCaptionLabel()
     setupTitleLabel()
   }
-  
+
   func setupView() {
     contentView.backgroundColor = .clear
   }
-  
+
   func setupPromoImageView() {
     contentView.addSubview(promoImageView)
     promoImageView.snp.makeConstraints {
@@ -64,7 +64,7 @@ private extension PromoCell {
     promoImageView.clipsToBounds = true
     promoImageView.image = ImageAssets.Images.landscapePlaceholder.image
   }
-  
+
   func setupHighlightedView() {
     contentView.addSubview(highlightedView)
     highlightedView.snp.makeConstraints {
@@ -76,7 +76,7 @@ private extension PromoCell {
     highlightedView.clipsToBounds = true
     highlightedView.backgroundColor = UIColor.Blue.lightBlue
   }
-  
+
   func setupHighlightedImageView() {
     highlightedView.addSubview(highlightedIconImageView)
     highlightedIconImageView.snp.makeConstraints {
@@ -88,7 +88,7 @@ private extension PromoCell {
     highlightedIconImageView.contentMode = .scaleAspectFit
     highlightedIconImageView.tintColor = .white
   }
-  
+
   func setupHighlightedTextLabel() {
     highlightedView.addSubview(highlightedTextLabel)
     highlightedTextLabel.snp.makeConstraints {
@@ -99,7 +99,7 @@ private extension PromoCell {
     highlightedTextLabel.textAlignment = .left
     highlightedTextLabel.textColor = UIColor.Yellow.golden
   }
-  
+
   func setupCaptionLabel() {
     promoImageView.addSubview(captionLabel)
     captionLabel.snp.makeConstraints {
@@ -109,7 +109,7 @@ private extension PromoCell {
     captionLabel.font = .systemFont(ofSize: 16)
     captionLabel.numberOfLines = 0
   }
-  
+
   func setupTitleLabel() {
     promoImageView.addSubview(titleLabel)
     titleLabel.snp.makeConstraints {

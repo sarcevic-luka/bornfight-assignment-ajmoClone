@@ -10,7 +10,7 @@ import Alamofire
 protocol Resource {
   var endpoint: String { get }
   var method: HTTPMethod { get }
-  var queryItems: [URLQueryItem]  { get }
+  var queryItems: [URLQueryItem] { get }
 }
 
 extension Resource {

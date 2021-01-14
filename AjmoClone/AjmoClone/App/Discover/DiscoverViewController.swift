@@ -19,11 +19,11 @@ class DiscoverViewController: UIViewController {
   var presenter: DiscoverViewPresentingLogic?
   private lazy var contentView = DiscoverContentView()
   private var dataSource: DiscoverDataSource?
-  
+
   override func loadView() {
     view = contentView
   }
-  
+
   override func viewDidLoad() {
     super.viewDidLoad()
     setupView()
@@ -39,13 +39,13 @@ extension DiscoverViewController: DiscoverDisplayLogic {
     self.dataSource = dataSource
     contentView.collectionView.reloadData()
   }
-  
+
   func displayGenericErrorMessagePopup() {
     let alert = UIAlertController(title: "Alert", message: "Fetch failed", preferredStyle: UIAlertController.Style.alert)
     alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil))
     self.present(alert, animated: true, completion: nil)
   }
-  
+
   func displayRefreshControlRefreshComplete() {
     contentView.collectionView.refreshControl?.endRefreshing()
   }
@@ -55,11 +55,11 @@ private extension DiscoverViewController {
   func setupView() {
     setupContentView()
   }
-  
+
   func setupContentView() {
     contentView.collectionView.dataSource = self
     contentView.compositionalLayout.layoutDelegate = self
-    
+
     contentView.refreshControlRefreshHandler = { [weak self] in
       self?.presenter?.onRefreshControlRefresh()
     }
@@ -71,11 +71,11 @@ extension DiscoverViewController: UICollectionViewDataSource {
   func numberOfSections(in collectionView: UICollectionView) -> Int {
     return dataSource?.numberOfSections() ?? 0
   }
-  
+
   func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
     return dataSource?.numberOfItems(in: section) ?? 0
   }
-  
+
   func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
     guard let item = dataSource?.item(at: indexPath) else { return UICollectionViewCell() }
     switch item {
@@ -83,36 +83,39 @@ extension DiscoverViewController: UICollectionViewDataSource {
       let cell = collectionView.dequeueReusableCell(NewsCell.self, at: indexPath)
       cell.update(newsViewModel)
       return cell
-      
+
     case .promo(let promoViewModel):
       let cell = collectionView.dequeueReusableCell(PromoCell.self, at: indexPath)
       cell.update(promoViewModel)
       return cell
-      
+
     case .venue(let venueViewModel):
       let cell = collectionView.dequeueReusableCell(VenueCell.self, at: indexPath)
       cell.update(venueViewModel)
       return cell
-      
+
     case .venueTag(let tagViewModel):
       let cell = collectionView.dequeueReusableCell(VenueTagCell.self, at: indexPath)
       cell.update(tagViewModel)
       return cell
-      
+
     case .venueCategory(let categoryViewModel):
       let cell = collectionView.dequeueReusableCell(VenueCategoryCell.self, at: indexPath)
       cell.update(categoryViewModel)
       return cell
     }
   }
-  
-  func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+
+  func collectionView(_ collectionView: UICollectionView,
+                      viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
     guard let section = dataSource?.section(at: indexPath.section) else {
       return UICollectionReusableView()
     }
     switch section {
     case .news(let title, _), .venue(let title, _), .promo(let title, _):
-      let header = collectionView.dequeueReusableSupplementaryView(HeaderView.self, ofKind: kind, forIndexPath: indexPath)
+      let header = collectionView.dequeueReusableSupplementaryView(HeaderView.self,
+                                                                   ofKind: kind,
+                                                                   forIndexPath: indexPath)
       header.update(HeaderView.ViewModel(title, nil))
       return header
     default:

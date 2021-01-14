@@ -17,4 +17,3 @@ public struct Pick {
 }
 
 extension Pick: Decodable { }
-

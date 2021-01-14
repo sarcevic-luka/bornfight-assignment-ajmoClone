@@ -11,7 +11,8 @@ import UIKit
 class DiscoverContentView: UIView {
   var refreshControlRefreshHandler: Action?
   private(set) lazy var compositionalLayout = DiscoverLayout()
-  private(set) lazy var collectionView = UICollectionView(frame: .zero, collectionViewLayout: compositionalLayout.layout)
+  private(set) lazy var collectionView = UICollectionView(frame: .zero,
+                                                          collectionViewLayout: compositionalLayout.layout)
 
   override init(frame: CGRect) {
     super.init(frame: frame)
@@ -35,7 +36,7 @@ private extension DiscoverContentView {
     setupView()
     setupCollectionView()
   }
-  
+
   func setupView() {
     backgroundColor = .white
   }

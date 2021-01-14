@@ -11,11 +11,11 @@ struct ImageAssets { }
 
 extension ImageAssets {
   enum Icons: String, ImageAsset {
-    case chalice = "chalice"
+    case chalice
   }
-  
+
   enum Images: String, ImageAsset {
-    case landscapePlaceholder = "landscapePlaceholder"
-    case backgroundPattern = "backgroundPattern"
+    case landscapePlaceholder
+    case backgroundPattern
   }
 }

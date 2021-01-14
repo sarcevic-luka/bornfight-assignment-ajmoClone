@@ -32,7 +32,7 @@ public struct Venue {
   public let type: String
   public let name: String
   public let description: String
-  
+
   private enum CodingKeys: String, CodingKey {
     case id
     case subtitle

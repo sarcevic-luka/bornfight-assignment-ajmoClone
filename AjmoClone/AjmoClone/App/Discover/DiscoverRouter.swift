@@ -15,7 +15,7 @@ protocol DiscoverRouterDelegate: class { }
 class DiscoverRouter {
   weak var viewController: DiscoverViewController?
   weak var delegate: DiscoverRouterDelegate?
-  
+
   static func createModule(delegate: DiscoverRouterDelegate?) -> DiscoverViewController {
     let view = DiscoverViewController(nibName: nil, bundle: nil)
     let interactor = DiscoverInteractor()

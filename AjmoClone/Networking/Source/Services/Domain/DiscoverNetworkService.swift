@@ -42,7 +42,7 @@ private extension DiscoverNetworkService {
         }
     }
   }
-  
+
   func getVenues() -> Promise<Venues> {
     Promise { fullfill, reject in
       Networking.session
@@ -58,4 +58,3 @@ private extension DiscoverNetworkService {
     }
   }
 }
-

@@ -12,7 +12,7 @@ class VenueCategoryCell: UICollectionViewCell {
   private lazy var containerView = UIView()
   private lazy var venueImageView = UIImageView()
   private lazy var titleLabel = UILabel()
-  
+
   override init(frame: CGRect) {
     super.init(frame: frame)
     setupViews()
@@ -39,11 +39,11 @@ private extension VenueCategoryCell {
     setupVenueImageView()
     setupTitleLabel()
   }
-  
+
   func setupView() {
     contentView.backgroundColor = .clear
   }
-  
+
   func setupContainerView() {
     contentView.addSubview(containerView)
     containerView.snp.makeConstraints {
@@ -52,7 +52,7 @@ private extension VenueCategoryCell {
     containerView.layer.cornerRadius = 8
     containerView.clipsToBounds = true
   }
-  
+
   func setupVenueImageView() {
     containerView.addSubview(venueImageView)
     venueImageView.snp.makeConstraints {
@@ -61,7 +61,7 @@ private extension VenueCategoryCell {
     }
     titleLabel.font = .systemFont(ofSize: 12)
   }
-  
+
   func setupTitleLabel() {
     containerView.addSubview(titleLabel)
     titleLabel.snp.makeConstraints {

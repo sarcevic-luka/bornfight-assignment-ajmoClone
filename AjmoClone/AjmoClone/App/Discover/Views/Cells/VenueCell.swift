@@ -20,7 +20,7 @@ class VenueCell: UICollectionViewCell {
     super.init(frame: frame)
     setupViews()
   }
-  
+
   @available(*, unavailable)
   required init?(coder aDecoder: NSCoder) {
     fatalError("init(coder:) has not been implemented")
@@ -48,11 +48,11 @@ private extension VenueCell {
     setupDescriptionLabel()
     setupDistanceLabel()
   }
-  
+
   func setupView() {
     contentView.backgroundColor = .clear
   }
-  
+
   func setupContainerView() {
     contentView.addSubview(containerView)
     containerView.snp.makeConstraints {
@@ -64,7 +64,7 @@ private extension VenueCell {
     containerView.clipsToBounds = true
     containerView.backgroundColor = .white
   }
-  
+
   func setupVenueImageView() {
     containerView.addSubview(venueImageView)
     venueImageView.snp.makeConstraints {
@@ -73,7 +73,7 @@ private extension VenueCell {
     }
     venueImageView.image = ImageAssets.Images.landscapePlaceholder.image
   }
-  
+
   func setupTitleLabel() {
     containerView.addSubview(titleLabel)
     titleLabel.snp.makeConstraints {
@@ -83,7 +83,7 @@ private extension VenueCell {
     titleLabel.font = .systemFont(ofSize: 16, weight: .semibold)
     titleLabel.textColor = .black
   }
-  
+
   func setupDescriptionLabel() {
     containerView.addSubview(descriptionLabel)
     descriptionLabel.snp.makeConstraints {
@@ -93,7 +93,7 @@ private extension VenueCell {
     descriptionLabel.font = .systemFont(ofSize: 12)
     descriptionLabel.textColor = .darkGray
   }
-    
+
   func setupDistanceLabel() {
     containerView.addSubview(distanceLabel)
     distanceLabel.snp.makeConstraints {

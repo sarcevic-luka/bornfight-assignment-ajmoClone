@@ -23,7 +23,7 @@ enum DiscoverDataSourceSection: SectionProtocol {
   case venue(String, [DiscoverDataSourceItem])
   case venueTag([DiscoverDataSourceItem])
   case venueCategory(String, [DiscoverDataSourceItem])
-  
+
   var items: [DiscoverDataSourceItem] {
     switch self {
     case .promo(_, let item):
@@ -56,8 +56,7 @@ class DiscoverDataSource: NSObject, DataSourceProtocol {
 
 extension DiscoverDataSource {
   func setLocationManager() {
-    if (CLLocationManager.locationServicesEnabled())
-    {
+    if CLLocationManager.locationServicesEnabled() {
       locationManager = CLLocationManager()
       locationManager.delegate = self
       locationManager.desiredAccuracy = kCLLocationAccuracyBest
@@ -65,7 +64,7 @@ extension DiscoverDataSource {
       locationManager.startUpdatingLocation()
     }
   }
-  
+
   func buildSections() {
     sections.removeAll()
     if let promoSection = createPromoSection() {
@@ -86,7 +85,7 @@ extension DiscoverDataSource: CLLocationManagerDelegate {
       manager.startUpdatingLocation()
     }
   }
-  
+
   func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
     if let location = locations.first {
       currentLocation = location
@@ -106,13 +105,13 @@ private extension DiscoverDataSource {
     }
     return .promo("Discover", createPromoDataItem(with: promotedNews))
   }
-  
+
   func createNewsSection() -> DiscoverDataSourceSection? {
     guard !news.isEmpty else { return nil }
     let maxNumber = min(maxNumberOfItemsShown, news.count)
     return .news("What's up?", news[0..<maxNumber].map(createNewsDataItem))
   }
-  
+
   func createVenueAndVenueTypesSections() -> [DiscoverDataSourceSection]? {
     guard !customPicks.isEmpty else { return nil }
     var arrangedVenusPairs: [DiscoverDataSourceSection] = []
@@ -121,18 +120,18 @@ private extension DiscoverDataSource {
     }
     return arrangedVenusPairs
   }
-  
+
   func createVenueAndVenueTypesSection(for venuePick: Pick) -> [DiscoverDataSourceSection] {
     let venueItems = venuePick.items
     let maxVenueNumber = min(maxNumberOfItemsShown, venueItems.count)
     let venueDataSourceItems: [DiscoverDataSourceItem] = venueItems[0..<maxVenueNumber].map(createVenueDataItem)
     let venuesInSection: DiscoverDataSourceSection = .venue(venuePick.title, venueDataSourceItems)
-    
+
     let tagItems = venuePick.tags
     let maxTagNumber = min(maxNumberOfItemsShown, tagItems.count)
     let tagsDataSourceItems: [DiscoverDataSourceItem] = tagItems[0..<maxTagNumber].map(createVenueTagsDataItem)
     let tagsInSection: DiscoverDataSourceSection = .venueTag(tagsDataSourceItems)
-    
+
     return [venuesInSection, tagsInSection]
   }
 }
@@ -142,16 +141,16 @@ private extension DiscoverDataSource {
   func createPromoDataItem(with news: News) -> DiscoverDataSourceItem {
     return .promo(PromoCell.ViewModel(news.highlightedText, news.imageUrl, news.title, news.caption))
   }
-  
+
   func createNewsDataItem(with news: News) -> DiscoverDataSourceItem {
     .news(NewsCell.ViewModel(news.title, news.imageUrl, news.caption, news.createdAt))
   }
-  
+
   func createVenueDataItem(with venue: Venue) -> DiscoverDataSourceItem {
     let distance = distanceFromTo(location: CLLocation(latitude: venue.lat, longitude: venue.lon))
     return .venue(VenueCell.ViewModel(venue.name, venue.pictureUrl, venue.subtitle, distance))
   }
-  
+
   func createVenueTagsDataItem(with venueTag: Tag) -> DiscoverDataSourceItem {
     .venueTag(VenueTagCell.ViewModel(venueTag.name, UIColor(hex: venueTag.color)))
   }

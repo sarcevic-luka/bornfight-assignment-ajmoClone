@@ -46,11 +46,11 @@ private extension HeaderView {
     setupTitleLabel()
     setupActionButton()
   }
-  
+
   func setupView() {
     self.backgroundColor = .clear
   }
-  
+
   func setupTitleLabel() {
     addSubview(titleLabel)
     titleLabel.snp.makeConstraints {
@@ -61,7 +61,7 @@ private extension HeaderView {
     titleLabel.textColor = .black
     titleLabel.textAlignment = .left
   }
-  
+
   func setupActionButton() {
     addSubview(actionButton)
     actionButton.snp.makeConstraints {

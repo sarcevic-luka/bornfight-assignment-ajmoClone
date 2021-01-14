@@ -5,6 +5,8 @@
 //  Created by Luka Šarčević on 10.01.2021..
 //
 
+// swiftlint:disable force_unwrapping
+
 import Foundation
 
 enum Host: String {

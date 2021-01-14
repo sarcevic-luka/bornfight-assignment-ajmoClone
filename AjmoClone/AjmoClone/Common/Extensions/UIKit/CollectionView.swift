@@ -31,15 +31,22 @@ public extension UICollectionView {
     return cell
   }
 
-  func dequeueReusableSupplementaryView<T: UICollectionReusableView>(_ type: T.Type, ofKind kind: String, forIndexPath indexPath: IndexPath) -> T {
-    guard let view = dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: T.defaultReuseIdentifier, for: indexPath) as? T else {
+  func dequeueReusableSupplementaryView<T: UICollectionReusableView>(_ type: T.Type,
+                                                                     ofKind kind: String,
+                                                                     forIndexPath indexPath: IndexPath) -> T {
+    guard let view = dequeueReusableSupplementaryView(ofKind: kind,
+                                                      withReuseIdentifier: T.defaultReuseIdentifier,
+                                                      for: indexPath) as? T else {
       fatalError("Could not dequeue supplementary view (\(kind)) with identifier: \(T.defaultReuseIdentifier)")
     }
     return view
   }
 
-  func dequeueReusableSupplementaryView<T: UICollectionReusableView>(ofKind kind: String, forIndexPath indexPath: IndexPath) -> T {
-    guard let view = dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: T.defaultReuseIdentifier, for: indexPath) as? T else {
+  func dequeueReusableSupplementaryView<T: UICollectionReusableView>(ofKind kind: String,
+                                                                     forIndexPath indexPath: IndexPath) -> T {
+    guard let view = dequeueReusableSupplementaryView(ofKind: kind,
+                                                      withReuseIdentifier: T.defaultReuseIdentifier,
+                                                      for: indexPath) as? T else {
       fatalError("Could not dequeue supplementary view (\(kind)) with identifier: \(T.defaultReuseIdentifier)")
     }
     return view

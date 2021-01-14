@@ -16,7 +16,7 @@ class VenueTagCell: UICollectionViewCell {
     super.init(frame: frame)
     setupViews()
   }
-  
+
   @available(*, unavailable)
   required init?(coder aDecoder: NSCoder) {
     fatalError("init(coder:) has not been implemented")
@@ -38,11 +38,11 @@ private extension VenueTagCell {
     setupContainerView()
     setupTitleLabel()
   }
-  
+
   func setupView() {
     contentView.backgroundColor = .clear
   }
-  
+
   func setupContainerView() {
     contentView.addSubview(containerView)
     containerView.snp.makeConstraints {
@@ -53,7 +53,7 @@ private extension VenueTagCell {
     containerView.layer.cornerRadius = 8
     containerView.clipsToBounds = true
   }
-    
+
   func setupTitleLabel() {
     containerView.addSubview(titleLabel)
     titleLabel.snp.makeConstraints {

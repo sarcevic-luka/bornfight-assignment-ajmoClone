@@ -25,7 +25,7 @@ public final class UrlQueryBuilder {
   public typealias QueryKey = String
   private let url: URL
   private lazy var queryItems = [URLQueryItem]()
-  
+
   public init(url: URL) {
     self.url = url
   }
@@ -36,12 +36,12 @@ public extension UrlQueryBuilder {
     queryItems.append(URLQueryItem(name: queryKey, value: value))
     return self
   }
-  
+
   func addQueryItems(_ items: [URLQueryItem]) -> Self {
     queryItems += items
     return self
   }
-  
+
   func build() -> URL? {
     guard var components = URLComponents(url: url, resolvingAgainstBaseURL: true) else { return nil }
     components.queryItems = queryItems.isEmpty ? nil : queryItems

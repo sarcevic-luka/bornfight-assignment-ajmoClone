@@ -21,7 +21,7 @@ class NewsCell: UICollectionViewCell {
     super.init(frame: frame)
     setupViews()
   }
-  
+
   @available(*, unavailable)
   required init?(coder aDecoder: NSCoder) {
     fatalError("init(coder:) has not been implemented")
@@ -56,11 +56,11 @@ private extension NewsCell {
     setupTypeLabel()
     setupPublishedLabel()
   }
-  
+
   func setupView() {
     contentView.backgroundColor = .clear
   }
-  
+
   func setupContainerView() {
     contentView.addSubview(containerView)
     containerView.snp.makeConstraints {
@@ -72,7 +72,7 @@ private extension NewsCell {
     containerView.clipsToBounds = true
     containerView.backgroundColor = .white
   }
-  
+
   func setupNewsImageView() {
     containerView.addSubview(newsImageView)
     newsImageView.snp.makeConstraints {
@@ -81,7 +81,7 @@ private extension NewsCell {
     }
     newsImageView.image = ImageAssets.Images.landscapePlaceholder.image
   }
-  
+
   func setupTitleLabel() {
     containerView.addSubview(titleLabel)
     titleLabel.snp.makeConstraints {
@@ -92,7 +92,7 @@ private extension NewsCell {
     titleLabel.numberOfLines = 2
     titleLabel.textColor = .black
   }
-  
+
   func setupDescriptionLabel() {
     containerView.addSubview(descriptionLabel)
     descriptionLabel.snp.makeConstraints {
@@ -103,7 +103,7 @@ private extension NewsCell {
     descriptionLabel.numberOfLines = 2
     descriptionLabel.textColor = .darkGray
   }
-  
+
   func setupTypeLabel() {
     containerView.addSubview(typeLabel)
     typeLabel.snp.makeConstraints {
@@ -114,7 +114,7 @@ private extension NewsCell {
     typeLabel.font = .systemFont(ofSize: 12)
     typeLabel.textColor = .red
   }
-  
+
   func setupPublishedLabel() {
     containerView.addSubview(publishedLabel)
     publishedLabel.snp.makeConstraints {

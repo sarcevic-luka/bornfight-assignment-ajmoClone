@@ -1,4 +1,3 @@
-
 //  Venues.swift
 //  Model
 //
