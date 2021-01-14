@@ -7,6 +7,7 @@
 
 import UIKit
 import CoreLocation
+import MapKit
 import Model
 
 enum DiscoverDataSourceItem {
@@ -34,37 +35,23 @@ enum DiscoverDataSourceSection: SectionProtocol {
   }
 }
 
-class DiscoverDataSource: NSObject, DataSourceProtocol {
-  private let news: [News]
-  private let venueCategories: [VenueCategory]
-  private let customPicks: [Pick]
+class DiscoverDataSource: DataSourceProtocol {
+  private var news: [News] = []
+  private var venueCategories: [VenueCategory] = []
+  private var customPicks: [Pick] = []
   private let maxNumberOfItemsShown = 8
   private var currentLocation: CLLocation?
   private let dateFormatter = TimeDateFormatter()
+  private let distanceFormater = MKDistanceFormatter()
+
   private(set) lazy var sections = [DiscoverDataSourceSection]()
-  private(set) var locationManager = CLLocationManager()
   
-  init(newsList: [News], venuesData: Venues) {
-    news = newsList
-    venueCategories = venuesData.venueCategories
-    customPicks = venuesData.customPicks
-    super.init()
-    setLocationManager()
+  init() {
     buildSections()
   }
 }
 
 extension DiscoverDataSource {
-  func setLocationManager() {
-    if CLLocationManager.locationServicesEnabled() {
-      locationManager = CLLocationManager()
-      locationManager.delegate = self
-      locationManager.desiredAccuracy = kCLLocationAccuracyBest
-      locationManager.requestWhenInUseAuthorization()
-      locationManager.startUpdatingLocation()
-    }
-  }
-
   func buildSections() {
     sections.removeAll()
     if let promoSection = createPromoSection() {
@@ -77,20 +64,17 @@ extension DiscoverDataSource {
       sections.append(contentsOf: venueSections)
     }
   }
-}
-
-extension DiscoverDataSource: CLLocationManagerDelegate {
-  func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
-    if status == .authorizedAlways || status == .authorizedWhenInUse {
-      manager.startUpdatingLocation()
-    }
+  
+  func set(newsList: [News], venuesData: Venues) {
+    news = newsList
+    venueCategories = venuesData.venueCategories
+    customPicks = venuesData.customPicks
+    buildSections()
   }
-
-  func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-    if let location = locations.first {
-      currentLocation = location
-      manager.stopUpdatingLocation()
-    }
+  
+  func setLocation(location: CLLocation) {
+    currentLocation = location
+    buildSections()
   }
 }
 
@@ -165,6 +149,10 @@ private extension DiscoverDataSource {
     guard let curentPosition = currentLocation else {
       return ""
     }
-    return "\(curentPosition.distance(from: location) / 1000)"
+    distanceFormater.unitStyle = .abbreviated
+    let distance = curentPosition.distance(from: location)
+    distanceFormater.string(fromDistance: distance)
+    print(distanceFormater.string(fromDistance: distance))
+    return distanceFormater.string(fromDistance: distance)
   }
 }
